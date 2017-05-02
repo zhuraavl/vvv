@@ -1,0 +1,372 @@
+
+header
+  position: fixed
+  width: 100%
+  height: 105px
+  top: 0
+  left: 0
+  background: $blue
+  z-index: 1000
+  border-bottom: 2px solid transparent
+  transition: all .5s ease-in-out
+  overflow: hidden  
+  .logo
+    display: block
+    width: 100%
+    transition: all .5s ease-in-out
+    position: relative
+    .logo-half-one
+      position: absolute
+      left: 0
+      top: 5px
+      width: 90px
+      transition: all .5s ease-in-out
+      @include tablet-v
+        top: 25px
+        width: 100%
+        
+    .logo-half-two
+      position: absolute
+      right: 0
+      top: 10px
+      width: 200px
+      overflow: hidden
+      transition: all .5s ease-in-out
+      @include tablet-v
+        display: none
+      img
+        width: 85px
+        display: block
+        margin: auto
+    .logo-half-three
+      position: absolute
+      right: 0
+      top: 10px
+      width: 200px
+      overflow: hidden
+      transform: translateY(100px)
+      transition: all .5s ease-in-out
+      @include tablet-v
+        display: none
+      img
+        width: 130px
+        display: block
+        margin: auto
+  button.open-off-menu
+    width: 100%
+    background: transparent
+    border: 0
+    height: 105px
+    position: relative
+    transition: all .5s ease-in-out
+    .lines
+      position: absolute
+      width: 40px
+      height: 5px
+      top: 0
+      bottom: 0
+      margin: auto
+      display: block
+      background: #000
+      transition: all .5s ease-in-out
+      transition-delay: .3s
+      &:after
+        content: ''
+        position: absolute
+        width: 40px
+        height: 5px
+        background: #000
+        left: 0
+        top: 12px
+        transition: all .5s ease-in-out
+        transition-delay: .1s
+      &:before
+        content: ''
+        position: absolute
+        width: 40px
+        height: 5px
+        background: #000
+        left: 0
+        top: -12px
+        transition: all .3s ease-in-out
+    .text-menu
+      font-size: 24px
+      font-weight: 400
+      letter-spacing: 1px
+      color: #fff
+      @include tablet-v
+        display: none
+    &:hover
+      .lines
+        background: #fff
+        transform: translateX(10px)
+        &:before
+          background: #fff
+          transform: translateX(10px)
+        &:after
+          background: #fff
+          transform: translateX(15px)
+  .search-box
+    padding: 0
+  .search-area
+    text-align: center
+    position: relative
+    transition: all .5s ease-in-out
+    input
+      width: 100%
+      height: 105px
+      padding: 1em
+      border: 0
+      border-left: 1px solid #ccc
+      border-right: 1px solid #ccc
+      background: #fff
+      outline: none
+      font-size: 1em
+      transition: all .5s ease-in-out
+      @include tablet-v
+        &::placeholder
+          color: transparent
+    .send
+      position: absolute
+      height: 25px
+      width: 25px
+      top: 0px
+      bottom: 0
+      margin: auto
+      display: block
+      right: 1em
+      left: auto
+      background: none
+      border: 0
+      color: $pink
+      @include tablet-v
+        right: 0
+        left: 0
+        margin: auto
+  .cart-box
+    transition: all .5s ease-in-out
+    display: block
+    padding-top: 2em
+    color: #000
+    h4, p
+      margin: 0
+    p
+      font-size: 28px
+      text-transform: uppercase
+      font-weight: 400
+      letter-spacing: 1px
+      color: #000
+      @include tablet-v
+        font-size: 18px
+        padding-top: 9px
+      //span
+        font-size: 12px
+        text-transform: uppercase
+        font-weight: 800
+        color: #000
+        margin-top: .5em
+    i
+      display: block
+      text-align: center
+      transition: all 1s ease
+      @include tablet-v
+        padding-top: 12px
+      &:before
+        font-size: 35px
+        @include tablet-v
+          font-size: 14px
+      &:hover
+        transform: rotate(90deg)
+    span
+      display: block
+      font-size: 18px
+      letter-spacing: 0
+    &:hover
+      color: #fff
+
+
+  &.resize
+    height: 55px
+    button.open-off-menu
+      height: 55px
+    .logo
+      .logo-half-one
+        transform: translateY(-20px) scale(.6)
+        @include tablet-v
+          transform: translateY(-25px) scale(.8)
+      .logo-half-two
+        transform: translateY(-100px)
+      .logo-half-three
+        transform: translateY(0px)
+    .search-area
+      input
+        height: 55px
+    .cart-box
+      padding-top: .75em
+      @include tablet-v
+        padding-top: .5em
+  &.resize + .off-canvas-header
+    padding-top: 55px
+
+
+
+
+.lang-menu
+  padding: 0
+  margin: 0
+  background: #fff
+  width: 80px
+  text-align: center
+  li
+    display: inline-block
+    &:first-child
+      border-right: 2px solid $blue
+    
+    a
+      display: block
+      font-size: 12px
+      text-transform: uppercase
+      letter-spacing: 1px
+      padding: 5px
+.work-time
+  padding: 0
+  margin: 0
+  list-style: none
+  margin-top: 1em
+  li
+    display: inline-block
+    text-align: center
+    text-transform: uppercase
+    font-size: 12px
+    vertical-align: top
+    padding-right: 5px
+    
+ul.top-menu
+  list-style: none
+  margin-top: 10px
+  a
+    font-size: 28px
+    display: block
+    text-transform: uppercase
+    font-weight: 300
+    letter-spacing: 1px
+    @include tablet-v
+      font-size: 18px
+ul.main-menu
+  list-style: none
+  margin-top: 15px
+  a
+    display: block
+    font-size: 18px
+    font-weight: 300
+    letter-spacing: 1px
+    @include tablet-v
+      font-size: 16px
+
+.clon-top-menu
+  padding-left: 20px
+  @include tablet-v
+    padding-left: 10px
+  a
+    display: block
+    font-size: 18px
+    font-weight: 300
+    letter-spacing: 1px
+    color: rgba(0, 0, 0, 0.7)
+    @include tablet-v
+      font-size: 12px
+    &:hover
+      text-decoration: none
+    
+    
+.off-canvas-header
+  position: fixed
+  z-index: 999
+  left: 0
+  top: 0
+  width: 50%
+  height: 100%
+  padding-top: 80px
+  transform: translateY(-100%)
+  opacity: 0
+  visibility: hidden
+  min-height: 700px
+  transition: all .3s ease-in-out
+  @include tablet-v
+    width: 100%
+  
+    
+  &.show
+    transform: translateY(0px)
+    opacity: 1
+    visibility: visible
+  h6
+    color: rgba(0, 0, 0, 0.5)
+  a
+    color: #000
+    &:hover
+      color: #fff
+  ul
+    padding: 0
+  .first-menu
+    float: left
+    width: 50%
+    padding: 20px
+    background: $blue
+    height: 100vh
+    min-height: 700px
+    @include tablet-v
+      padding: 10px
+    
+  .second-menu
+    float: left
+    width: 50%
+    padding: 20px
+    background: #fff
+    height: 100vh
+    min-height: 700px
+    @include tablet-v
+      padding: 10px
+  ul.category-menu-header
+    list-style: none
+    li
+    a
+      color: #000
+      display: block
+      
+      span, h2
+        display: inline-block
+        vertical-align: middle
+        @include tablet-v
+      h2
+        font-size: 18px
+        font-weight: 300
+        letter-spacing: 1px
+        @include tablet-v
+          font-size: 14px
+          margin: 0
+          margin-bottom: 15px
+        span.cout-cat
+          display: none
+      .icon
+        width: 30px
+        height: 30px
+        border-radius: 100%
+        margin-right: .5em
+        @include tablet-v
+          display: none
+  
+  
+    
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      

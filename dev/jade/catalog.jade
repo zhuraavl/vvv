@@ -1,0 +1,142 @@
+doctype html
+html(lang='en')
+  head
+  
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Catalog page
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    meta(name='author', content='')
+    link(rel='shortcut icon', href='favicon.ico')
+    link(rel='stylesheet', href='css/main.css')
+    script.
+      document.documentElement.className = 'js';
+  body.catalog-page.loading
+    include includes/header
+    main
+      section.page-title
+        .container-fluid
+          .row
+            .col-md-3
+              .breadcrumbs
+                ul
+                  li
+                    a(href="") Главная
+                  li
+                    a(href="") Название категории
+                  
+            .col-md-6.page-title-title
+              h1 Канцтовары
+              a(href="") 35 подкатегории
+            .col-md-3.text-right
+                a.btn.b-sec(href="") ← Все категории
+      section.catalog
+        .container-fluid
+          .row
+            .col-md-12
+              .filters-box
+                
+                ul
+                  li
+                    a(href="") Акварель
+                  li
+                    a(href="") Альбомы
+                  li
+                    a(href="") Блокноты
+                  li
+                    a(href="") Готовальни и циркули
+                  li
+                    a(href="") Гуашь
+                  li
+                    a(href="") Для офиса
+                  li
+                    a(href="") Дневники
+                  li
+                    a(href="") Карандаши
+                  li
+                    a(href="") Карты и глобусы
+                  li
+                    a(href="") Кисточки
+                  li
+                    a(href="") Клей
+                  li
+                    a(href="") Корректоры
+                  li
+                    a(href="") Линейки
+                  li
+                    a(href="") Мел
+                  li
+                    a(href="") Надувные шарики
+                  li
+                    a(href="") Обложки
+                  li
+                    a(href="") Пакеты
+                  li
+                    a(href="") Папки
+                  li
+                    a(href="") Пеналы
+                  li
+                    a(href="") Печати
+                  li
+                    a(href="") Пластилин и песок
+                  li
+                    a(href="") Подставки для книг
+                  li
+                    a(href="") Праздники
+                  li
+                    a(href="") Ручки
+                  li
+                    a(href="") Рюкзаки и сумки
+                  li
+                    a(href="") Словари
+                  li
+                    a(href="") Стирательные резинки
+                  li
+                    a(href="") Сувениры
+                  li
+                    a(href="") Тетради
+                  li
+                    a(href="") Точилки
+                  li
+                    a(href="") Трафарет
+                  li
+                    a(href="") Фломастеры
+                  li
+                    a(href="") Фототовары
+                  li
+                    a(href="") Цветная бумага
+                  li
+                    a(href="") Цветной картон
+                    
+            .col-md-12
+              .row
+                .col-md-12
+                  .row
+                    .col-md-4
+                      h6 товары — 205 товаров
+                    .col-md-4
+                      
+                      
+                    .col-md-4.sort-box
+                      
+                      .select
+                        select
+                          option(value="last") Последние добавленные
+                          option(value="") Цена, по возрастанию
+                          option(value="") Цена, по убыванию
+                          option(value="") От А до Я
+                          option(value="") От Я до А
+                        span.select__arrow
+                include includes/main-product-items
+           
+    include includes/footer  
+    
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+    script(src="https://use.fontawesome.com/2b87f5494f.js")
+    script(src="js/lib/lightslider.js")
+    script(src="js/scripts.js")
+    
+    
+  

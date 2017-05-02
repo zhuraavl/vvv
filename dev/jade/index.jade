@@ -1,0 +1,190 @@
+doctype html
+html(lang='en')
+  head
+  
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title New Site
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    meta(name='author', content='')
+    link(rel='shortcut icon', href='favicon.ico')
+    link(rel='stylesheet', href='css/main.css')
+    script.
+      document.documentElement.className = 'js';
+  body.main-page
+    include includes/header
+    main
+      section.category-main
+        .container-fluid
+          .row
+            .col-md-12.text-center
+              h6 категории
+              
+          .row
+            .col-md-3
+              a(href="catalog.html") 
+                span.icon
+                  img(src="media/emoji/1.gif", alt="")
+                h2.title
+                  | Для малышей
+                  span.cout-cat подкатегорий: 12
+            .col-md-3
+              a(href="catalog.html") 
+                span.icon
+                  img(src="media/emoji/3.png", alt="")
+                h2.title
+                  | Девочке
+                  span.cout-cat подкатегорий: 12
+            .col-md-3
+              a(href="catalog.html") 
+                span.icon
+                  img(src="media/emoji/2.gif", alt="")
+                h2.title 
+                  | Мальчику
+                  span.cout-cat подкатегорий: 12
+            .col-md-3
+              a(href="catalog.html") 
+                span.icon
+                  img(src="media/emoji/6.png", alt="")
+                h2.title
+                  | И тем и тем
+                  span.cout-cat подкатегорий: 12
+            
+            .col-md-3
+              a(href="catalog.html") 
+                span.icon
+                  img(src="media/emoji/9.png", alt="")
+                h2.title
+                  | Деревянные
+                  span.cout-cat подкатегорий: 12
+            .col-md-3
+              a(href="catalog.html") 
+                span.icon
+                  img(src="media/emoji/3.gif", alt="")
+                h2.title
+                  | Конструкторы
+                  span.cout-cat подкатегорий: 12
+            .col-md-3
+              a(href="") 
+                span.icon
+                  img(src="media/emoji/222.png", alt="")
+                h2.title
+                  | Детская комната
+                  span.cout-cat подкатегорий: 12
+            .col-md-3
+              a(href="catalog.html") 
+                span.icon
+                  img(src="media/emoji/4.gif", alt="")
+                h2.title
+                  | Канцтовары
+                  span.cout-cat подкатегорий: 12
+            
+            .col-md-3
+              a(href="catalog.html") 
+                span.icon
+                  img(src="media/emoji/5.gif", alt="")
+                h2.title
+                  | Отдых
+                  span.cout-cat подкатегорий: 12
+            .col-md-3
+              a(href="catalog.html") 
+                span.icon
+                  img(src="media/emoji/88.png", alt="")
+                h2.title
+                  | Развивающие
+                  span.cout-cat подкатегорий: 12
+            .col-md-3
+              a(href="catalog.html") 
+                span.icon
+                  img(src="media/emoji/6.gif", alt="")
+                h2.title
+                  | Спорт
+                  span.cout-cat подкатегорий: 12
+            .col-md-3
+              a(href="catalog.html") 
+                span.icon
+                  img(src="media/emoji/11.png", alt="")
+                h2.title
+                  | Уход за малышами
+                  span.cout-cat подкатегорий: 12
+            
+      section.products-main
+        .container-fluid
+          .row
+            .col-md-12
+              ul.tabs-for-products
+                li
+                  a(href="") 
+                    | Новинки
+                    span Последние добавленные товары
+                li
+                  a(href="") 
+                    | Популярные
+                    span Игрушки пользовательский рейтингк которых в среднем выше 8 баллов
+                li
+                  a(href="") 
+                    | С видео
+                    span Товары с видео обзорами
+          .row
+            include includes/main-product-items
+          .row
+            .col-md-4
+              a(href="") Новинки
+            .col-md-4
+              .contine-watch
+                a.btn(href="catalog.html") Показать больше
+            .col-md-4
+              a(href="") С видео
+           
+      
+      section.main-collection
+        span.icon.icon29
+        span.icon.icon28
+        span.icon.icon27
+        span.icon.icon26
+        span.icon.icon25
+        span.icon.icon24
+        span.icon.icon23
+        .container-fluid
+          .row
+            .col-md-12.text-center
+              h6 коллекции
+              br
+            .col-md-3
+              .collection-item
+                .circle-pic(style="background-image: url(media/images/03.jpg)")
+                a(href="") 
+                  |Игрушки на радиоуправлении
+                  i.fa.fa-arrow-circle-o-right
+            .col-md-3
+              .collection-item
+                .circle-pic(style="background-image: url(media/images/00.jpg)")
+                a(href="") 
+                  |Куклы для наших девочек
+                  i.fa.fa-arrow-circle-o-right
+            .col-md-3
+              .collection-item
+                .circle-pic(style="background-image: url(media/images/04.jpg)")
+                a(href="") 
+                  |Мальчишке на 10 лет
+                  i.fa.fa-arrow-circle-o-right
+              
+            .col-md-3
+              .collection-item
+                .circle-pic(style="background-image: url(media/images/01.jpg)")
+                a(href="") 
+                  |Играем на природе
+                  i.fa.fa-arrow-circle-o-right
+      
+           
+    include includes/footer  
+    
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+    script(src="https://use.fontawesome.com/2b87f5494f.js")
+    script(src="js/lib/lightslider.js")
+    script(src="js/scripts.js")
+    
+    
+  

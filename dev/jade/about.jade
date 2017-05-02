@@ -1,0 +1,92 @@
+doctype html
+html(lang='ru')
+  head
+  
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title О нас
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    meta(name='author', content='')
+    link(rel='shortcut icon', href='favicon.ico')
+    link(rel='stylesheet', href='css/main.css')
+    script.
+      document.documentElement.className = 'js';
+  body.about-page.loading
+    include includes/header
+    main
+      
+      section
+        .container-fluid
+          .row.instruction
+            .col-md-12.text-center
+              h6 оформление заказа
+            .col-md-3
+              .item
+                img(src="media/icons/1.png", alt="")
+                h3 Вы делаете заказ на сайте
+            .col-md-3
+              .item
+                img(src="media/icons/2.png", alt="")
+                h3 
+                  |Оплата
+                ul
+                  li На карточку Приватбанка
+                  li Наложенный платеж
+                  li Курьеру при получении
+                
+                //.row
+                  .col-sm-6
+                    p Мы оформляем заказ в офисе
+                    p Отправляем смс и email с суммой заказа
+                  .col-sm-6
+                    p Мы комплектуем и пакуем заказ
+                    p Отправляем смс и email с подтвержением оплаты
+            .col-md-3
+              .item
+                img(src="media/icons/3.png", alt="")
+                h3 Доставка
+                p.text-center Высылаем номер ТТН
+                ul
+                  li Новая Почта
+                  li Укрпочта
+                  li Интайм
+                  li Деливери
+                  li Автолюкс
+                  li Курьером по одессе
+                  li К грузовику на 7км
+                //.row
+                  .col-sm-6
+                    p Передаем заказ курьерской службе/курьеру
+                  .col-sm-6
+                    p Отправляем смс и email с номером ТТН
+                
+                
+            .col-md-3
+              .item
+                img(src="media/icons/4.png", alt="")
+                h3 Вы получаете заказ
+                //p Вы оплачиваете заказ наложенным платежом либо курьеру
+                
+          .row
+            .col-md-12.text-center
+              h6 почему мы?
+            .col-md-3
+            .col-md-3
+            .col-md-3
+            .col-md-3
+          .row
+            .col-md-12.text-center
+              h6 Вопросы и ответы
+            
+           
+    include includes/footer  
+    
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+    script(src="https://use.fontawesome.com/2b87f5494f.js")
+    script(src="js/lib/lightslider.js")
+    script(src="js/scripts.js")
+    
+    
+  
