@@ -2,66 +2,207 @@
   padding-top: 0px
 
 .login-or-register-box
-  ul.tabs-nav
+  margin-top: 30px
+  position: relative
+  .tabs-nav
     padding: 0
-    margin: 0
     list-style: none
     text-align: center
-    border-bottom: 1px solid $blue
     overflow: hidden
-    li
-      display: inline-block
+    width: 300px
+    margin: auto
+    a
+      font-size: 14px
+      color: #000
+      letter-spacing: 1px
+      text-decoration: none
+      display: block
+      padding: .25em 0
+      width: 150px
       float: left
-      width: 50%
-      a
-        text-transform: uppercase
-        font-size: 12px
-        color: #000
-        letter-spacing: 1px
-        text-decoration: none
-      &.active
-        border-bottom: 2px solid $blue
-        a
+      line-height: 1.2
+      &.register-link
+        padding-right: 30px
+        &.active
           color: $dark-blue
-  ul.tabs-contant
-    padding: 0
-    margin: 0
-    list-style: none
-    form
-      padding-top: 20px
-    input
-      display: block
-      width: 100%
-      margin-bottom: 10px
-      border: 0
-      border-bottom: 1px solid $blue
-      padding: 10px
-    input[type=submit]
-      width: 200px
+      &.login-link
+        padding-left: 30px
+      &.active
+        color: $pink
+    .toggle
+      position: absolute
+      width: 70px
+      left: 0
+      right: 0
       margin: auto
-      font-size: 20px
-      display: block
-      margin-top: 20px
+      z-index: -1
+      .toggle-box
+        width: 70px
+        height: 38px
+        border: 2px solid #ddd
+        border-radius: 25px
+        margin: auto
+        background: #ddd
+        cursor: pointer
+        span
+          width: 36px
+          height: 36px
+          background: $pink
+          border-radius: 100%
+          display: block
+          margin-top: -1px
+          transition: all .3s ease-in-out
+      &.to-left
+        span
+          transform: translateX(0)
+          background: $dark-blue
+      &.to-right
+        span
+          transform: translateX(83%)
       
+  .tabs-content
+    min-height: 150px
+    position: relative
+    overflow: hidden
+    width: 100%
+    .tabs-item 
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      transform: translateX(100%) scale(.5) 
+      opacity: 0
+      visibility: hidden
+      transition: all .5s ease-in-out
+      &.show
+        visibility: visible
+        transform: translateX(0) scale(1) 
+        opacity: 1
+    .steps-box
+      width: 300px
+      height: 150px
+      background: #fff
+      overflow: hidden
+      margin: auto
+      position: relative
+      overflow: hidden
+      @include tablet-v
+        width: 100%
+      form
+        padding-top: 20px
+      .step
+        height: 150px
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        background: #fff
+        display: block
+        visibility: hidden
+        transition: all .3s ease-in-out
+        transform: translateY(-100%)
+        &.step-1
+          transform: translateY(0)
+          visibility: visible
+        &.go-show
+          transform: translateY(0)
+          visibility: visible
+        &.go-hidden
+          transform: translateY(100%)
+          visibility: hidden
+        
+        p
+          position: absolute
+          width: 100%
+          left: 0
+          top: 20px
+          margin: 0
+          text-align: center
+          text-transform: uppercase
+          letter-spacing: 4px
+          font-size: 10px
+          span
+            font-weight: 900
+        .btn
+          position: absolute
+          bottom: 0px
+          left: 0
+          right: 0
+          width: 140px
+          margin: auto
+    
+        input
+          display: block
+          width: 100%
+          height: 150px
+          border: 0
+          text-align: center
+          font-size: 20px
+          background: transparent
+          position: relative
+          padding: 0 20px
+          max-width: 400px
+          margin: auto
+
+        input.btn[type=submit]
+          display: block
+          border-radius: 50px
+          background: $dark-blue
+          border: 0
+          color: #fff
+          height: auto
+          width: 200px
+          padding: 10px
       
+    .login-box
+      padding-top: 20px
+      text-align: center
+      .text-input
+        input
+          border: 0
+          text-align: center
+          height: 40px
+          padding: 0 20px
+          max-width: 400px
+          margin: auto
+          display: block
+      .btn
+        margin-top: 10px
+        display: inline-block
+        background: $pink
+        border-color: $pink
       
-      
+.cart-head
+  @include tablet-v
+    display: none
+  h6
+    font-size: 10px
+  
+  
+  
 .cart-item
   margin-bottom: 20px
-  .pic
-    width: 100%
-    height: 100px
-    background-size: cover
-    background-position: center
+  img
+    max-width: 100%
   h2
     font-size: 18px
     font-weight: 300
     margin: 0
     margin-top: 10px
     letter-spacing: 1px
+  p
+    font-size: 10px
+    color: #999
+    text-transform: uppercase
+    letter-spacing: 1px
+    span
+      font-weight: bold
   .product-how-quantity
     position: relative
     margin-top: 15px
+    @include tablet-v
+      margin-bottom: 15px
     span
       color: $dark-blue
       padding: .5em 0
@@ -88,12 +229,29 @@
       span
         display: block
         font-size: 12px
+    &.all
+      h3
+        color: $dark-blue
+  .remove-box
+    text-align: right
+    padding-top: 20px
+    padding-right: 11%
+    @include tablet-v
+      padding-top: 12px
+  .remove-item 
+    padding: 0
+    border: 0
+    width: 30px
+    background: transparent
+    @include tablet-v
+      width: 14px
+    
         
         
 .cart-total
   padding: 20px 0
-  border-top: 2px solid #000
-  text-align: right
+  border-top: 2px solid #eee
+  text-align: center
   h4
     margin: 0
     font-weight: 300

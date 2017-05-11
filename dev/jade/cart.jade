@@ -20,71 +20,282 @@ html(lang='ru')
       section
         .container-fluid
           .row
-            .col-md-12.text-center
-              h6 корзина
-              br
-            .col-md-9
+            .col-md-12
               .cart-list
+                .cart-head
+                  .row
+                    .col-md-6
+                      .row
+                        .col-md-4
+                          h6 картинка
+                        .col-md-8
+                          h6 название / артикул
+                    .col-md-6
+                      .row
+                        .col-md-3
+                          h6 количество
+                        
+                        .col-md-3
+                          h6 цена за шт.
+                        .col-md-3
+                          h6 цена за все
                 .cart-item
                   .row
                     .col-md-6
                       .row
-                        .col-md-6
-                          .pic(style="background-image: url(media/img-p/10/01.jpg)")
-                        .col-md-6
+                        .col-md-4
+                          img(src="media/img-p/10/01.jpg", alt="")
+                          
+                        .col-md-8
                           h2 Игрушечные машинки Тачки 3шт. 
+                          p
+                            | Артикул: 
+                            span kejkdfgfd
                     .col-md-6
                       .row
-                        .col-md-6
+                        .col-md-3
                           .product-how-quantity
                             span.quantity-minus -
                             input.quantity-amount(type="text" value="1")
                             span.quantity-plus +
-                        .col-md-6
+                        
+                        .col-md-3.col-xs-5
                           .product-info-price
                             h3 
                               | 150
                               span грн
-                .cart-item
-                  .row
-                    .col-md-6
-                      .row
-                        .col-md-6
-                          .pic(style="background-image: url(media/img-p/10/03.jpg)")
-                        .col-md-6
-                          h2 Батут детский для игр
-                    .col-md-6
-                      .row
-                        .col-md-6
-                          .product-how-quantity
-                            span.quantity-minus -
-                            input.quantity-amount(type="text" value="1")
-                            span.quantity-plus +
-                        .col-md-6
-                          .product-info-price
+                        .col-md-3.col-xs-5
+                          .product-info-price.all
                             h3 
                               | 150
                               span грн
+                        .col-md-3.col-xs-2.remove-box
+                          button.remove-item 
+                            img(src="media/icons/delete.svg", alt="")
+                
                 .cart-total
                   h4 
                     |Итого:
                     span 300 грн
-            .col-md-3
+      section
+        .container-fluid
+          .row
+            .col-md-12.text-center
+              h6 Оформление заказа
+            .col-md-12
               .login-or-register-box
-                ul.tabs-nav
-                  li.active
-                    a(href="") Нет аккаунта
-                  li
-                    a(href="") Есть аккаунт
-                ul.tabs-contant
-                  li
+                .tabs-nav
+                  a.active.register-link(href="#") 
+                    |Нет
+                    br
+                    |аккаунта
+                  .toggle
+                    .toggle-box
+                      span
+                  
+                  a.login-link(href="#") 
+                    |Есть
+                    br
+                    |аккаунт
+                .tabs-content
+                  .register-box.tabs-item.show
+                    form#registration-form(action="")
+                      .steps-box
+                        .step.step-1
+                          p
+                            |шаг 
+                            span 1
+                            |/6
+                          input(name="name" type="text" placeholder="напишите ваше имя здесь" autofocus="true")
+                          button.btn Дальше →
+                        .step.step-2
+                          p
+                            |шаг 
+                            span 2
+                            |/6
+                          input(name="familia" type="text" placeholder="Фамилия")
+                          button.btn Дальше ↛
+                        .step.step-3
+                          p
+                            |шаг 
+                            span 3
+                            |/6
+                          input(name="otchestvo" type="text" placeholder="Отчество")
+                          button.btn Дальше ↝
+                        .step.step-4
+                          p
+                            |шаг 
+                            span 4
+                            |/6
+                          input(name="email" type="email" placeholder="E-mail")
+                          button.btn Дальше ↠
+                        .step.step-5
+                          p
+                            |шаг 
+                            span 5
+                            |/6
+                          input(name="phone" type="number" placeholder="Телефон")
+                          button.btn Дальше ↦
+                        .step.step-6
+                          p
+                            |шаг 
+                            span 6
+                            |/6
+                          input(name="pass" type="password" placeholder="Пароль")
+                          input.btn(type="submit" value="Отправить ⇵")
+                  .login-box.tabs-item
                     form(action="")
-                      input(name="fio" type="text" placeholder="ФИО")
-                      input(name="email" type="email" placeholder="E-mail")
-                      input(name="phone" type="number" placeholder="Телефон")
-                      input(name="pass" type="password" placeholder="Пароль")
-                      input.btn(type="submit" value="Купить")
-            
+                      label.text-input(for="#login")
+                        input#login(type="text" name="login" placeholder="Логин")
+                      label.text-input(for="#pass")
+                        input#pass(type="password" name="password" placeholder="Пароль")
+                      label
+                        input.btn(type="submit" value="Войти")
+      section.checkout
+        .tenis-game
+          .paddle
+            .solid
+              .surface
+              .hold
+                .top
+                .transition
+                .handle
+            .wiggly
+              .string
+              .ball
+
+
+        .container-fluid
+          .row
+            .col-md-3.col-sm-6.col-xs-12
+              h6 Варианты доставки
+              ul.delivery-list
+                li
+                  input#1(type="radio" name="delivery")
+                  label(for="1")
+                    img(src="media/checkout/1.jpg", alt="")
+                    p
+                      span.title-delivery Рынок 7 км 
+                      span.description-delivery Грузовиком на приемный пункт
+                    
+                li
+                  input#2(type="radio" name="delivery")
+                  label(for="2")
+                    img(src="media/checkout/2.jpg", alt="")
+                    p
+                      span.title-delivery Автолюкс
+                      span.description-delivery Автобусом на станцию
+                li
+                  input#3(type="radio" name="delivery")
+                  label(for="3")
+                    img(src="media/checkout/3.png", alt="")
+                    p
+                      span.title-delivery Курьером
+                      span.description-delivery Курьерская доставка по Одессе 
+                li
+                  input#4(type="radio" name="delivery")
+                  label(for="4")
+                    img(src="media/checkout/4.jpg", alt="")
+                    p
+                      span.title-delivery Укрпошта
+                      span.description-delivery Доставка по почтовым отделениям
+                li
+                  input#5(type="radio" name="delivery")
+                  label(for="5")
+                    img(src="media/checkout/5.jpg", alt="")
+                    p
+                      span.title-delivery Нова Пошта
+                      span.description-delivery Доставка в ваше отделение
+                li
+                  input#6(type="radio" name="delivery")
+                  label(for="6")
+                    img(src="media/checkout/6.jpg", alt="")
+                    p
+                      span.title-delivery ІнТайм
+                      span.description-delivery Доставка поездом
+                li
+                  input#7(type="radio" name="delivery")
+                  label(for="7")
+                    img(src="media/checkout/7.jpg", alt="")
+                    p
+                      span.title-delivery DeliveryAuto
+                      span.description-delivery Доставка чем-то еще
+                    
+                
+            .col-md-3.col-sm-6.col-xs-12
+              h6 
+                |Детали доставки 
+                span ИнТайм
+              .select
+                select
+                  option(value='0', selected='selected') Выберите вашу область
+                  option(value='05') Винницкая
+                  option(value='07') Волынская
+                  option(value='12') Днепропетровская
+                  option(value='14') Донецкая
+                  option(value='18') Житомирская
+                span.select__arrow
+              .select
+                select
+                  option(value='0', selected='selected') Выберите ваш город
+                  option(value='05') Винницкая
+                  option(value='07') Волынская
+                  option(value='12') Днепропетровская
+                  option(value='14') Донецкая
+                  option(value='18') Житомирская
+                span.select__arrow
+              .select
+                select
+                  option(value='0', selected='selected') Выберите ваше отделение
+                  option(value='05') Винницкая
+                  option(value='07') Волынская
+                  option(value='12') Днепропетровская
+                  option(value='14') Донецкая
+                  option(value='18') Житомирская
+                span.select__arrow
+            .col-md-3.col-sm-6.col-xs-12
+              h6 Комментраии
+              .textarea
+                textarea(name="" placeholder="Напишите нюансы доставки")
+              label.control.control--checkbox
+                | Получать заказ будет другой человек
+                input(type='checkbox', checked='checked')
+                .control__indicator
+              label.text-input(for="#fio-other")
+                input#fio-other(type="text" name="fio-other" placeholder="ФИО получателя")
+              label.text-input(for="#tel-other")
+                input#tel-other(type="number" name="tel-other" placeholder="Телефон получателя")
+              
+
+
+
+            .col-md-3.col-sm-6.col-xs-12
+              h6 оплата
+              
+              ul.delivery-list
+                li
+                  input#11(type="radio" name="payment-list")
+                  label(for="11")
+                    p
+                      span.title-delivery Перевод на карту ПриватБанк
+                      span.description-delivery банковская комиссия 0,5% от суммы перевода
+                    
+                li
+                  input#22(type="radio" name="payment-list")
+                  label(for="22")
+                    p
+                      span.title-delivery Наложным платежем
+                      span.description-delivery Оплата при получении в почтовом отделении
+                li
+                  input#23(type="radio" name="payment-list")
+                  label(for="23")
+                    p
+                      span.title-delivery Водителю 
+                      span.description-delivery Оплата по факту доставки водителю (Только по Одессе)
+              
+              
+              label.submit-box
+                input.btn.submit(type="submit" value="Оформить заказ")
             
            
     include includes/footer  

@@ -6,6 +6,8 @@
     margin-bottom: 25px
     display: block
     color: $dark-blue
+    @include mobil
+      height: 60px
     span
       display: inline-block
     .cout-cat
@@ -21,6 +23,8 @@
       display: inline-block
       vertical-align: text-bottom
       margin-right: 20px
+      @include mobil
+        margin: 0
       img
         width: 50px
     h2
@@ -33,18 +37,27 @@
     
     
 .products-main
+  padding-top: 50px
+  @include mobil
+    padding-top: 25px
   .tabs-for-products
     margin: 0
-    padding: 0
     list-style: none
     text-align: center
     padding: 50px 0
     width: 100%
     overflow: hidden
+    @include mobil
+      padding: 25px 0
     li
       display: inline-block
       vertical-align: middle
       min-width: 300px
+      @include mobil
+        display: block
+        width: 100%
+        margin-bottom: 30px
+        min-width: 100%
       a
         display: block
         font-size: 22px
@@ -53,7 +66,6 @@
         letter-spacing: 1px
         text-decoration: none
         padding-bottom: .5em
-        
         position: relative
         span
           position: absolute
@@ -69,8 +81,13 @@
           display: block
       &:nth-child(2)
         width: 48%
+        @include mobil
+          display: block
+          width: 100%
         a
           transform: scale(2.5)
+          @include mobil
+            transform: scale(1)
           span
             display: none
           
@@ -87,15 +104,37 @@
     
 .contine-watch
   text-align: center
-  padding: 50px 0
+  padding: 0
   .btn
     font-size: 2em
+    @include mobil
+      font-size: 1.2em
     
-    
+.alert-box-main
+  background: $pink
+  padding: 30px 0
+  color: #fff
+  transition: all 1.5s ease-in-out
+  text-align: center
+  h3
+    font-size: 24px
+    margin: 0
+    font-weight: 300
+    letter-spacing: 1px
+    @include mobil
+      font-size: 22px
+      text-align: left
+      margin-bottom: .5em
+  p
+    margin: 0
+    font-size: 13px
+    letter-spacing: 1px
+  &.blue
+    background: $dark-blue
 .main-collection
-  padding: 25px 0 100px
+  padding: 50px 0 100px
   position: relative
-  .icon
+  //.icon
     position: absolute
     width: 40px
     height: 40px
@@ -127,7 +166,8 @@
     
   .collection-item
     text-align: center
-    
+    @include mobil
+      margin-bottom: 2em
     .circle-pic
       width: 250px
       height: 250px
@@ -135,6 +175,9 @@
       background-size: cover
       border-radius: 100%
       transition: all .5s ease-in-out
+      @include mobil
+        width: 200px
+        height: 200px
     a
       width: 200px
       margin: auto
@@ -144,6 +187,9 @@
       font-weight: 300
       letter-spacing: 1px
       margin-top: .5em
+      @include mobil
+        font-size: 20px
+        padding-top: .5em
       i
         display: block
         margin-top: .5em

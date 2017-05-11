@@ -15,6 +15,12 @@
   &.still
     transform: translateY(0)
     opacity: 1
+  .to-product-link
+    position: absolute
+    width: 100%
+    height: 100%
+    opacity: 0
+    z-index: 5
   .product-pic
     position: relative
     height: 250px
@@ -46,8 +52,9 @@
         font-weight: 300
         transition: all .3s ease-in-out
         letter-spacing: 1px
-        height: 40px
+        height: 41px
         overflow: hidden
+        line-height: 1.4
     .product-info-price
       float: left
       width: 20%
@@ -64,21 +71,22 @@
   .product-controls
     position: relative
     padding: .25em 1em 25px
+    z-index: 10
     .btn
       opacity: 0
       transform: translateY(50px)
       transition: all .2s ease-in-out
       font-size: .7em
     .buy-button
-      float: right
+      font-size: 1em
+      margin: auto
+      display: block
+      width: 110px
       background: $pink
       color: #fff
       border: 1px solid $pink
       
-    .detail-button
-      border: 1px solid $dark-blue
-      background: transparent
-      color: $dark-blue
+    
   &:hover
     cursor: pointer
     .product-info-title

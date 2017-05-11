@@ -18,7 +18,7 @@
 @import "pages/index.sass"
 @import "pages/product.sass"
 @import "pages/catalog.sass"
-@import "pages/question.sass"
+@import "pages/review.sass"
 @import "pages/about.sass" 
 @import "pages/cart.sass" 
 
@@ -32,6 +32,7 @@
 @import "elements/others-product.sass"
 @import "elements/page-title.sass"
 @import "elements/contact-form.sass"
+@import "elements/checkout.sass"
 
 // Main
 body
@@ -45,6 +46,8 @@ a
 main
   padding-top: 150px
   transition: all .5s ease-in-out
+  @include mobil
+    padding-top: 100px
   &.menu
     transform: scale(.9)
     

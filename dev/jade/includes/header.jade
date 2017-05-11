@@ -1,38 +1,31 @@
 header
   .container-fluid
     .row
-      .col-sm-3.col-xs-3
+      .col-sm-4.col-xs-5
         button.open-off-menu
           span.lines
           span.text-menu МЕНЮ
-      .col-sm-3.col-xs-3
+        button.open-search
+          i.fa.fa-search
+      .col-sm-4.col-xs-2
         a.logo(href="/")
-          span.logo-half-one
-            img(src="media/logo-soroka.svg", alt="")
-          span.logo-half-two
-            img(src="media/logo-soroka-text.svg", alt="")
-          span.logo-half-three
-            img(src="media/logo-soroka-long.png", alt="")
-      .col-sm-3.col-xs-3.search-box
-        .search-area
-          input(type="text" placeholder="Поиск товаров")
-          button.send
-            i.fa.fa-search
-      .col-sm-3.col-xs-3
-        a.cart-box(href="cart.html")
           .row
-            .col-xs-6
-              i.fa.fa-shopping-cart
-            .col-xs-6.text-center
-              p 
-                | 0
-                
-            
-            
-          
-            
-            
-              
+            .col-sm-6.col-xs-12.logo-half-one
+              img(src="media/logo-soroka.svg", alt="")
+            .col-sm-6.hidden-xs.logo-half-two
+              span
+                img(src="media/logo-soroka-text.svg", alt="")
+              span
+                img(src="media/logo-soroka-long.png", alt="")
+      .col-sm-4.col-xs-5
+        button.open-call
+          i.fa.fa-phone
+        a.cart-box(href="cart.html")
+          i.fa.fa-shopping-cart
+          p 
+            | 1000
+  
+
 .off-canvas-header
   
   .first-menu
@@ -58,149 +51,115 @@ header
       li
         a(href="about.html") Почему мы?
       li
-        a(href="about.html") Вопросы и ответы
+        a(href="review.html") Вопросы и ответы
       li
         a(href="") Отзывы
       li
         a.open-contact-form(href="#") Связаться
     .clon-top-menu
-      a(href="") office@babyplus.ua
+      a(href="") sales@sorokavorona.com.ua
       a(href="") +38 (096) 033-77-00
       a(href="") +38 (099) 9-555-572
       a(href="") +38 (063) 313-11-33
-      ul.work-time
-        li
-          | Пн
-          br
-          |8
-          br
-          ||
-          br
-          |18
-        li
-          | Вт
-          br
-          |8
-          br
-          ||
-          br
-          |18
-        li
-          | Ср
-          br
-          |8
-          br
-          ||
-          br
-          |18
-        li
-          | Чт
-          br
-          |8
-          br
-          ||
-          br
-          |18
-        li
-          | Пт
-          br
-          |8
-          br
-          ||
-          br
-          |18
-        li
-          | Сб
-          br
-          |8
-          br
-          ||
-          br
-          |15
-        li
-          | Вс
-          br
-          |—
-          br
-          | 
-          br
-          | 
+      .work-time
+        p 
+          | Будни 
+          span с 8 до 18
+        p 
+          | Суббота 
+          span с 8 до 15
+        p 
+          |Выходной 
+          span воскрескенье
+        
           
   .second-menu
     ul.category-menu-header
       li
         a(href="catalog.html") 
-          span.icon.icon0
+          span.icon
+            img(src="media/emoji/1.gif", alt="")
           h2.title
-            | Игрушки
-            span.cout-cat подкатегорий: 12
+            | Для малышей
       li
         a(href="catalog.html") 
-          span.icon.icon27
+          span.icon
+            img(src="media/emoji/3.png", alt="")
           h2.title
-            | Для самых маленьких
-            span.cout-cat подкатегорий: 12
+            | Девочке
       li
         a(href="catalog.html") 
-          span.icon.icon2
+          span.icon
+            img(src="media/emoji/2.gif", alt="")
           h2.title 
-            |Канцтовары
-            span.cout-cat подкатегорий: 12
+            | Мальчику
       li
         a(href="catalog.html") 
-          span.icon.icon17
+          span.icon
+            img(src="media/emoji/6.png", alt="")
           h2.title
-            | Intex и Bestway
-            span.cout-cat подкатегорий: 12
+            | И тем и тем
       li
         a(href="catalog.html") 
-          span.icon.icon4
+          span.icon
+            img(src="media/emoji/9.png", alt="")
           h2.title
-            | Одежда и обувь
-            span.cout-cat подкатегорий: 12
+            | Деревянные
       li
         a(href="catalog.html") 
-          span.icon.icon5
+          span.icon
+            img(src="media/emoji/3.gif", alt="")
           h2.title
-            | Спортивные товары
-            span.cout-cat подкатегорий: 12
-      li
-        a(href="catalog.html") 
-          span.icon.icon6
-          h2.title
-            | Детская мебель
-            span.cout-cat подкатегорий: 12
-      li
-        a(href="catalog.html") 
-          span.icon.icon7
-          h2.title
-            | Детский транспорт
-            span.cout-cat подкатегорий: 12
+            | Конструкторы
       li
         a(href="") 
-          span.icon.icon8
+          span.icon
+            img(src="media/emoji/222.png", alt="")
           h2.title
-            | Игрушки
-            span.cout-cat подкатегорий: 12
+            | Детская комната
       li
         a(href="catalog.html") 
-          span.icon.icon9
-          h2.title
-            | Для самых маленьких
-            span.cout-cat подкатегорий: 12
-      li
-        a(href="catalog.html") 
-          span.icon.icon10
+          span.icon
+            img(src="media/emoji/4.gif", alt="")
           h2.title
             | Канцтовары
-            span.cout-cat подкатегорий: 12
       li
         a(href="catalog.html") 
-          span.icon.icon11
+          span.icon
+            img(src="media/emoji/5.gif", alt="")
           h2.title
-            | Intex и Bestway
-            span.cout-cat подкатегорий: 12
+            | Отдых
+      li
+        a(href="catalog.html") 
+          span.icon
+            img(src="media/emoji/88.png", alt="")
+          h2.title
+            | Развивающие
+      li
+        a(href="catalog.html") 
+          span.icon
+            img(src="media/emoji/6.gif", alt="")
+          h2.title
+            | Спорт
+      li
+        a(href="catalog.html") 
+          span.icon
+            img(src="media/emoji/11.png", alt="")
+          h2.title
+            | Уход за малышами
 
         
-        
+.product-in-box
+  img(src="media/icons/5.png", alt="")
+  span товар в корзине    
+  
+  
+  
+  
+.search-box
+  button.close-modal
+  .search-content
+    h6 поиск
+    input.search-input(type="text" placeholder="Введите ваш запрос сюда" autofocus="true")
+    input.send-search(type="submit" value="Искать")
     

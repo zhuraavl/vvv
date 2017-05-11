@@ -21,7 +21,9 @@ html(lang='en')
           li
             .pic(style="background-image: url(media/img-p/10/07.jpg)")
           li
-            iframe(type='text/html', src='https://www.youtube.com/embed/uxpDa-c-4Mc?controls=0&fs=0&rel=0&showinfo=0&color=white&enablejsapi=1', frameborder='0', allowfullscreen='')
+            .video-box
+              iframe(type='text/html', src='https://www.youtube.com/embed/uxpDa-c-4Mc?controls=0&fs=0&rel=0&showinfo=0&color=white&enablejsapi=1', frameborder='0', allowfullscreen='')
+              .video-cover(style="background-image: url(media/img-p/10/09.jpg)")
 
 
            
@@ -33,16 +35,9 @@ html(lang='en')
           .container-fluid
             .row
               .col-md-6
-                .breadcrumbs
-                  ul
-                    li
-                      a(href="") Главная
-                    li
-                      a(href="") Название категории
-                    li
-                      a(href="") Название товара
+                a.btn.b-sec(href="") ← Назад
               .col-md-6.text-right
-                a.btn.b-sec(href="") ← Все товары
+                
       
         .container-fluid.product-page-content
           .row.product-page-title

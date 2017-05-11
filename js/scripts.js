@@ -12,9 +12,9 @@ $(document).ready(function () {
   //  });
 
 
-  $("a.btn.detail-button").click(function(e){
+  $("a.to-product-link").click(function(e){
     event.preventDefault();
-    $(this).parent().parent().addClass( "still" );
+    $(this).parent().addClass( "still" );
     $(".product-thumb").addClass( "goout" );
     var href = $(this).attr('href');
     setTimeout(function () { 
@@ -54,8 +54,10 @@ $(document).ready(function () {
   $(window).scroll(function () {
     if ($(window).scrollTop() > 0) {
       $('header').addClass('resize');
+      $('.product-in-box').addClass('true-top');
     } else {
       $('header').removeClass('resize');
+      $('.product-in-box').removeClass('true-top');
     }
   });
 
@@ -89,6 +91,49 @@ $(document).ready(function () {
     $("main").toggleClass("menu");
     $(".off-canvas-header").toggleClass("show");
   });
+  $(".buy-button").click(function () {
+    $('.product-in-box').addClass('show');
+  });
+  
+  // main alert box button
+  $(".alert-box-main").hover(function () {
+    $(this).addClass('blue');
+  });
+  
+  
+  // scroll top button
+  $(".to-top").click(function () {
+    $("html, body").animate({scrollTop: 0}, 500);
+  });
+  // close modal on click white space
+  $(".close-modal").click(function () {
+    $(this).parent().removeClass('show');
+  });
+  // open call back modal
+  $(".open-call").click(function () {
+    $(this).toggleClass('active');
+    $(".call-back-box").toggleClass('show');
+  });
+  // open hidden paragraph on review
+  $(".read-paragraph").click(function () {
+    $(this).toggleClass('active');
+    $(".hidden-paragraph").slideToggle();
+  });
+  
+  // video cover on product page
+  $(".video-box").click(function () {
+    $(this).addClass('no-cover');
+    $('iframe').each(function () {
+      $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+    });
+  });
+  
+  
+  // open search box
+   $(".open-search").click(function () {
+    $('.search-box').toggleClass('show');
+    $(this).toggleClass('active');
+  });
   
   
   
@@ -102,10 +147,33 @@ $(document).ready(function () {
     event.preventDefault();
     $(".contact-form-box").removeClass("show");
   });
+  $("#registration-form button").click(function () {
+    event.preventDefault();
+    $(this).parent().addClass("go-hidden");
+    $(this).parent().next().addClass("go-show");
+  });
 
 
-
-
+  // toogle cart page registration or login
+  $(".login-or-register-box .register-link").click(function () {
+    event.preventDefault();
+    $(this).addClass('active');
+    $(".login-or-register-box .login-link").removeClass("active");
+    $('.login-or-register-box .toggle').removeClass("to-right");
+    $('.login-or-register-box .toggle').addClass("to-left");
+    $('.tabs-content .tabs-item').removeClass("show");
+    $('.tabs-content .register-box').addClass("show");
+  });
+  $(".login-or-register-box .login-link").click(function () {
+    event.preventDefault();
+    $(this).addClass('active');
+    $(".login-or-register-box .register-link").removeClass("active");
+    $('.login-or-register-box .toggle').removeClass("to-left");
+    $('.login-or-register-box .toggle').addClass("to-right");
+    $('.tabs-content .tabs-item').removeClass("show");
+    $('.tabs-content .login-box').addClass("show");
+    
+  });
 
   
   

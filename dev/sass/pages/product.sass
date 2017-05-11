@@ -5,6 +5,8 @@
   header
     background: transparent
     height: 55px
+    @include mobil
+      background: $blue
     a
       color: #333
     .open-off-menu
@@ -12,42 +14,23 @@
         background: #333
       .text-menu
         color: #333
-    .logo-half-three
-      opacity: 0
-      @include tablet-h
-        display: none
-    .search-area
-      input
-        background: transparent
-      &:hover
-        input
-          background: #fff
-    
     button.open-off-menu
       height: 55px
     .logo
-      .logo-half-one
-        transform: translateY(-20px) scale(.6)
-      .logo-half-two
+      .logo-half-one img
+        transform: translateY(-25px) scale(.6)
+        @include tablet-v
+          transform: translateY(-25px) scale(.8)
+        @include mobil
+          transform: translate(0)
+      .logo-half-two span
         transform: translateY(-100px)
-      .logo-half-three
-        transform: translateY(0px)
-    .search-area
-      input
-        height: 55px
+   
     .cart-box
-      padding-top: .55em
-      h4
-        font-size: 1.3em
+      height: 55px
     &.resize
       background: $blue
-      .search-area
-        input
-          background: #fff
-      .logo-half-three
-        opacity: 1
-      .cart-box
-        padding-top: .55em
+      
   .off-canvas-header
     padding-top: 55px
     
@@ -63,6 +46,7 @@
   padding: 0
   margin: 0
   overflow: hidden
+  background: #ddd
   .pic
     width: 100%
     margin: auto
@@ -70,11 +54,27 @@
     height: 100vh
     min-height: 650px
     background-size: cover
-    background-position: top center 
-  iframe
-    width: 100%
-    height: 100vh
+    background-position: top center
+    @include tablet-h
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+  .video-box
     position: relative
+    z-index: 10
+    .video-cover
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background-size: cover
+      background-position: center
+      transition: all .3s ease-in-out
+    iframe
+      width: 100%
+      height: 100vh
+      position: relative
     &:before
       content: ''
       position: absolute
@@ -82,11 +82,36 @@
       bottom: 0
       left: 0
       right: 0
+      border-radius: 100%
       margin: auto
       width: 200px
       height: 200px
-      background: red
+      background: #fff
       z-index: 100
+      transition: all .3s ease-in-out
+    &:after
+      content: ''
+      position: absolute
+      width: 0
+      height: 0
+      border-top: 50px solid transparent
+      border-left: 100px solid $pink
+      border-bottom: 50px solid transparent
+      top: 5px
+      left: 20px
+      right: 0
+      bottom: 0
+      margin: auto
+      z-index: 200
+      pointer-events: none
+      transition: all .3s ease-in-out
+    &.no-cover
+      .video-cover
+        opacity: 0
+        visibility: hidden
+      &:after, &:before
+        transform: scale(.5)
+        opacity: 0
   .slick-arrow
     position: absolute
     z-index: 1
@@ -168,6 +193,8 @@
     padding-top: .5em
     .btn
       font-size: 1.5em
+      background: $pink
+      border: 1px solid $pink
   .product-how-quantity
     position: relative
     margin: 60px 0 5px

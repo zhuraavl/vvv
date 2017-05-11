@@ -179,11 +179,11 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"\/dev\/jade\/question.jade": {
+	"\/dev\/jade\/review.jade": {
 		"cOD": 1,
 		"ft": 512,
 		"oA": 0,
-		"oAP": "\/question.html",
+		"oAP": "\/review.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -356,6 +356,19 @@
 		"oA": 2,
 		"oAP": "\/dev\/sass\/css\/question.css.map",
 		"oF": 0
+		},
+	"\/dev\/sass\/elements\/checkout.sass": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/dev\/sass\/css\/checkout.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"\/dev\/sass\/elements\/comment.sass": {
 		"aP": 1,
@@ -539,7 +552,7 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/dev\/sass\/pages\/question.sass": {
+	"\/dev\/sass\/pages\/review.sass": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -547,7 +560,7 @@
 		"ft": 2,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "\/dev\/sass\/css\/question.css",
+		"oAP": "\/dev\/sass\/css\/review.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -779,6 +792,77 @@
 		"oA": 2,
 		"oAP": "\/main-product-items.html",
 		"oF": 0
+		},
+	"\/media\/checkout\/1.jpg": {
+		"ft": 16384,
+		"iS": 1189,
+		"oA": 0,
+		"oAP": "\/media\/checkout\/1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/media\/checkout\/2.jpg": {
+		"ft": 16384,
+		"iS": 2354,
+		"oA": 0,
+		"oAP": "\/media\/checkout\/2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/media\/checkout\/3.png": {
+		"ft": 32768,
+		"iS": 7286,
+		"oA": 0,
+		"oAP": "\/media\/checkout\/3.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/media\/checkout\/4.jpg": {
+		"ft": 16384,
+		"iS": 5780,
+		"oA": 0,
+		"oAP": "\/media\/checkout\/4.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/media\/checkout\/5.jpg": {
+		"ft": 16384,
+		"iS": 2685,
+		"oA": 0,
+		"oAP": "\/media\/checkout\/5.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/media\/checkout\/6.jpg": {
+		"ft": 16384,
+		"iS": 2233,
+		"oA": 0,
+		"oAP": "\/media\/checkout\/6.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/media\/checkout\/7.jpg": {
+		"ft": 16384,
+		"iS": 3323,
+		"oA": 0,
+		"oAP": "\/media\/checkout\/7.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/media\/emoji\/1.gif": {
 		"ft": 4194304,
@@ -1395,11 +1479,22 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/media\/icons\/15.png": {
+	"\/media\/icons\/10.png": {
 		"ft": 32768,
-		"iS": 8338,
+		"iS": 8091,
 		"oA": 0,
-		"oAP": "\/media\/icons\/15.png",
+		"oAP": "\/media\/icons\/10.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/media\/icons\/16.png": {
+		"ft": 32768,
+		"iS": 7976,
+		"oA": 0,
+		"oAP": "\/media\/icons\/16.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -1433,6 +1528,82 @@
 		"iS": 8431,
 		"oA": 0,
 		"oAP": "\/media\/icons\/4.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/media\/icons\/5.png": {
+		"ft": 32768,
+		"iS": 9508,
+		"oA": 0,
+		"oAP": "\/media\/icons\/5.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/media\/icons\/6.png": {
+		"ft": 32768,
+		"iS": 9567,
+		"oA": 0,
+		"oAP": "\/media\/icons\/6.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/media\/icons\/7.png": {
+		"ft": 32768,
+		"iS": 8886,
+		"oA": 0,
+		"oAP": "\/media\/icons\/7.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/media\/icons\/8.png": {
+		"ft": 32768,
+		"iS": 9764,
+		"oA": 0,
+		"oAP": "\/media\/icons\/8.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/media\/icons\/delete.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/media\/icons\/delete.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/media\/icons\/filter-age.png": {
+		"ft": 32768,
+		"iS": 907,
+		"oA": 0,
+		"oAP": "\/media\/icons\/filter-age.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/media\/icons\/filter-price.png": {
+		"ft": 32768,
+		"iS": 905,
+		"oA": 0,
+		"oAP": "\/media\/icons\/filter-price.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -1747,6 +1918,26 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "\/media\/icons\/icon9.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/media\/icons\/lineika.jpg": {
+		"ft": 16384,
+		"iS": 9322,
+		"oA": 0,
+		"oAP": "\/media\/icons\/lineika.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/media\/icons\/top.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/media\/icons\/top.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -2205,6 +2396,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/question.html",
+		"oF": 0
+		},
+	"\/review.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/review.html",
 		"oF": 0
 		},
 	"\/styleguide.html": {

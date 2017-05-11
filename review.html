@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/main.css">
     <script>document.documentElement.className = 'js';</script>
   </head>
-  <body class="question-page loading">
+  <body class="catalog-page loading">
     <header>
       <div class="container-fluid">
         <div class="row">
@@ -51,7 +51,7 @@
           <li><a href="about.html">Оплата</a></li>
           <li><a href="about.html">Доставка</a></li>
           <li><a href="about.html">Почему мы?</a></li>
-          <li><a href="about.html">Вопросы и ответы</a></li>
+          <li><a href="review.html">Вопросы и ответы</a></li>
           <li><a href="">Отзывы</a></li>
           <li><a href="#" class="open-contact-form">Связаться</a></li>
         </ul>
@@ -114,47 +114,90 @@
       </div>
     </div>
     <main>
-      <section>
+      <section class="review-new-review">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-9 col-md-offset-3">
-              <h1>Вопросы и ответы</h1>
+            <div class="col-md-12 text-center">
+              <h6>Оставить отзыв</h6>
+            </div>
+            <div class="col-md-2">
+              <ul class="avatar-review">
+                <li>
+                  <input id="1" type="radio" name="avatar">
+                  <label for="1"><img src="media/icons/10.png" alt=""></label>
+                </li>
+                <li>
+                  <input id="2" type="radio" name="avatar">
+                  <label for="2"><img src="media/icons/11.png" alt=""></label>
+                </li>
+                <li>
+                  <input id="3" type="radio" name="avatar">
+                  <label for="3"><img src="media/icons/12.png" alt=""></label>
+                </li>
+                <li>
+                  <input id="4" type="radio" name="avatar">
+                  <label for="4"><img src="media/icons/13.png" alt=""></label>
+                </li>
+                <li>
+                  <input id="5" type="radio" name="avatar">
+                  <label for="5"><img src="media/icons/14.png" alt=""></label>
+                </li>
+                <li>
+                  <input id="6" type="radio" name="avatar">
+                  <label for="6"><img src="media/icons/15.png" alt=""></label>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <input type="text" placeholder="Ваше имя">
+              <input type="text" placeholder="Коротко о вас">
+              <input type="email" placeholder="Ваш E-mail">
+            </div>
+            <div class="col-md-6">
+              <textarea placeholder="Ваш отзыв"></textarea>
+              <input type="submit" class="btn">
             </div>
           </div>
-          <div class="row question-item">
-            <div class="col-md-3 col-sm-4 col-md-offset-3"><span>1.</span></div>
-            <div class="col-md-3 col-sm-4">
-              <h3>Сколько стоит доставка ваших игрушек если я не отсюда?</h3>
+        </div>
+      </section>
+      <section class="review-all-review">
+        <div class="container-fluid">
+          <div class="row review-items">
+            <div class="col-md-12 text-center">
+              <h6>Все отзывы</h6>
             </div>
-            <div class="col-md-3 col-sm-4">
-              <p>Доставка занимает от одного до двух часов, в зависимости от скорости велокурьера и времен года. Стоимость доставки рассчитывается из цен на сахар и муку, чтобы было можно печь пирожки</p>
+            <div class="col-md-4">
+              <div class="review-item"><img src="media/icons/14.png" alt="">
+                <h4>Иван</h4>
+                <h5>Прихвостень из преисподни</h5>
+                <p>Разнообразный и богатый опыт новая модель организационной деятельности представляет собой интересный эксперимент проверки существенных финансовых и административных условий.</p>
+                <button class="btn read-paragraph">Читать все</button>
+                <div class="hidden-paragraph">
+                  <p>С другой стороны сложившаяся структура организации играет важную роль в формировании дальнейших направлений развития. Товарищи! рамки и место обучения кадров способствует подготовки и реализации существенных финансовых и административных условий. Товарищи! сложившаяся структура организации влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий. </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="row question-item">
-            <div class="col-md-3 col-sm-4 col-md-offset-3"><span>2.</span></div>
-            <div class="col-md-3 col-sm-4">
-              <h3>Сколько стоит доставка ваших игрушек если я не отсюда?</h3>
+            <div class="col-md-4">
+              <div class="review-item"><img src="media/icons/15.png" alt="">
+                <h4>Лена</h4>
+                <h5>Домохозяйка</h5>
+                <p>Разнообразный и богатый опыт новая модель организационной деятельности представляет собой интересный эксперимент проверки существенных финансовых и административных условий.</p>
+              </div>
             </div>
-            <div class="col-md-3 col-sm-4">
-              <p>Доставка занимает от одного до двух часов, в зависимости от скорости велокурьера и времен года. Стоимость доставки рассчитывается из цен на сахар и муку, чтобы было можно печь пирожки</p>
+            <div class="col-md-4">
+              <div class="review-item"><img src="media/icons/10.png" alt="">
+                <h4>Дмитрий</h4>
+                <h5>Бизнесмен</h5>
+                <p>Разнообразный и богатый опыт новая модель организационной деятельности представляет собой интересный эксперимент проверки существенных финансовых и административных условий.</p>
+                <p>Разнообразный и богатый опыт новая модель организационной деятельности представляет собой интересный эксперимент проверки существенных финансовых и административных условий.</p>
+              </div>
             </div>
-          </div>
-          <div class="row question-item">
-            <div class="col-md-3 col-sm-4 col-md-offset-3"><span>3.</span></div>
-            <div class="col-md-3 col-sm-4">
-              <h3>Сколько стоит доставка ваших игрушек если я не отсюда?</h3>
-            </div>
-            <div class="col-md-3 col-sm-4">
-              <p>Доставка занимает от одного до двух часов, в зависимости от скорости велокурьера и времен года. Стоимость доставки рассчитывается из цен на сахар и муку, чтобы было можно печь пирожки</p>
-            </div>
-          </div>
-          <div class="row question-item">
-            <div class="col-md-3 col-sm-4 col-md-offset-3"><span>4.</span></div>
-            <div class="col-md-3 col-sm-4">
-              <h3>Сколько стоит доставка ваших игрушек если я не отсюда?</h3>
-            </div>
-            <div class="col-md-3 col-sm-4">
-              <p>Доставка занимает от одного до двух часов, в зависимости от скорости велокурьера и времен года. Стоимость доставки рассчитывается из цен на сахар и муку, чтобы было можно печь пирожки</p>
+            <div class="col-md-4">
+              <div class="review-item"><img src="media/icons/11.png" alt="">
+                <h4>Иван</h4>
+                <h5>Прихвостень из преисподни</h5>
+                <p>Разнообразный и богатый опыт новая модель организационной деятельности представляет собой интересный эксперимент проверки существенных финансовых и административных условий.</p>
+              </div>
             </div>
           </div>
         </div>

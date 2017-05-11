@@ -15,8 +15,8 @@
 
 .control__indicator
   position: absolute
-  top: -2px
-  left: 0
+  top: 18px
+  left: 20px
   height: 20px
   width: 20px
   background: #e6e6e6
@@ -31,9 +31,9 @@
     &:focus ~ .control__indicator
       background: #ccc
     &:checked ~ .control__indicator
-      background: #2aa1c0
+      background: $dark-blue
   &:hover input:not([disabled]):checked ~ .control__indicator
-    background: #0e647d
+    background: $blue
   input
     &:checked:focus ~ .control__indicator
       background: #0e647d
@@ -51,11 +51,19 @@
   display: block
 
 .control--checkbox
+  padding: 15px 25px
+  background: #fff
+  font-size: 18px
+  margin-top: 25px
+  padding-left: 55px
+  a
+    color: $dark-blue
+    text-decoration: underline
   .control__indicator:after
     left: 8px
-    top: 4px
-    width: 3px
-    height: 8px
+    top: 3px
+    width: 5px
+    height: 11px
     border: solid #fff
     border-width: 0 2px 2px 0
     transform: rotate(45deg)
@@ -76,21 +84,27 @@
 .select
   position: relative
   display: inline-block
-  margin-bottom: $s-m
+  border: 3px solid transparent
   width: 100%
+  
   select
     display: inline-block
     width: 100%
+    height: 58px
     cursor: pointer
-    padding: $s-s $s-l
+    padding: 0 15px
     outline: 0
     border: 0
     border-radius: 0
-    background: #e6e6e6
+    letter-spacing: 1px
+    font-size: 12px
+    line-height: 1
+    background: #fff
     color: #7b7b7b
     appearance: none
     -webkit-appearance: none
     -moz-appearance: none
+    
     &::-ms-expand
       display: none
     &:hover, &:focus
@@ -102,13 +116,13 @@
 
 .select__arrow
   position: absolute
-  top: 14px
-  right: $s-l
+  top: 28px
+  right: 15px
   width: 0
   height: 0
   pointer-events: none
   border-style: solid
-  border-width: 8px 5px 0 5px
+  border-width: 6px 3px 0 3px
   border-color: #7b7b7b transparent transparent transparent
 
 .select select
@@ -164,3 +178,20 @@ ul.pagination
       color: #000
       img
         width: 16px
+        
+        
+        
+        
+// text input
+
+.text-input
+  input
+    padding: 10px 20px
+    background: #fff
+    display: block
+    border: 3px solid #eee
+    height: 60px
+    width: 100%
+    letter-spacing: 1px
+    &:focus
+      border: 3px solid $pink
