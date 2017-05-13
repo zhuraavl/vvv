@@ -41,6 +41,7 @@ header
         a(href="") РУС
       li
         a(href="") УКР
+    
     ul.main-menu
       li
         a(href="index.html") Главная
@@ -51,15 +52,17 @@ header
       li
         a(href="about.html") Почему мы?
       li
-        a(href="review.html") Вопросы и ответы
+        a(href="about.html") Вопросы и ответы
       li
-        a(href="") Отзывы
+        a(href="review.html") Отзывы
       li
         a.open-contact-form(href="#") Связаться
+      li
+        button.btn.open-login Личный кабинет
     .clon-top-menu
       a(href="") sales@sorokavorona.com.ua
       a(href="") +38 (096) 033-77-00
-      a(href="") +38 (099) 9-555-572
+      a(href="") +38 (050) 711-44-15
       a(href="") +38 (063) 313-11-33
       .work-time
         p 
@@ -69,8 +72,8 @@ header
           | Суббота 
           span с 8 до 15
         p 
-          |Выходной 
-          span воскрескенье
+          |воскрескенье 
+          span Выходной 
         
           
   .second-menu
@@ -163,3 +166,81 @@ header
     input.search-input(type="text" placeholder="Введите ваш запрос сюда" autofocus="true")
     input.send-search(type="submit" value="Искать")
     
+    
+    
+    
+    
+    
+    
+.login-modal-box
+  button.close-modal
+  .login-content
+    h6.text-center войти в личный кабинет
+    .login-or-register-box
+      .tabs-nav
+        a.register-link(href="#") 
+          |Нет
+          br
+          |личного кабинета
+        .toggle.to-right
+          .toggle-box
+            span
+
+        a.active.login-link(href="#") 
+          |Есть
+          br
+          |личный кабинет
+      .tabs-content
+        .register-box.tabs-item
+          form#registration-form(action="")
+            .steps-box
+              .step.step-1
+                p
+                  |шаг 
+                  span 1
+                  |/6
+                input(name="name" type="text" placeholder="напишите ваше имя здесь" autofocus="true")
+                button.btn Дальше →
+              .step.step-2
+                p
+                  |шаг 
+                  span 2
+                  |/6
+                input(name="familia" type="text" placeholder="Фамилия")
+                button.btn Дальше ↛
+              .step.step-3
+                p
+                  |шаг 
+                  span 3
+                  |/6
+                input(name="otchestvo" type="text" placeholder="Отчество")
+                button.btn Дальше ↝
+              .step.step-4
+                p
+                  |шаг 
+                  span 4
+                  |/6
+                input(name="email" type="email" placeholder="E-mail")
+                button.btn Дальше ↠
+              .step.step-5
+                p
+                  |шаг 
+                  span 5
+                  |/6
+                input(name="phone" type="number" placeholder="Телефон")
+                button.btn Дальше ↦
+              .step.step-6
+                p
+                  |шаг 
+                  span 6
+                  |/6
+                input(name="pass" type="password" placeholder="Пароль")
+                input.btn(type="submit" value="Отправить ⇵")
+        .login-box.tabs-item.show
+          form(action="")
+            label.text-input(for="#login")
+              input#login(type="text" name="login" placeholder="Логин")
+            label.text-input(for="#pass")
+              input#pass(type="password" name="password" placeholder="Пароль")
+            label
+              input.btn(type="submit" value="Войти")

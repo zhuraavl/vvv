@@ -111,13 +111,17 @@ $(document).ready(function () {
   });
   // open call back modal
   $(".open-call").click(function () {
+    
+    $('.search-box').removeClass('show');
+    $(".open-search").removeClass('active');
+    
     $(this).toggleClass('active');
     $(".call-back-box").toggleClass('show');
   });
   // open hidden paragraph on review
   $(".read-paragraph").click(function () {
     $(this).toggleClass('active');
-    $(".hidden-paragraph").slideToggle();
+    $(this).prev().slideToggle();
   });
   
   // video cover on product page
@@ -131,7 +135,22 @@ $(document).ready(function () {
   
   // open search box
    $(".open-search").click(function () {
+     
+    $(".open-call").removeClass('active');
+    $(".call-back-box").removeClass('show'); 
+     
     $('.search-box').toggleClass('show');
+    $(this).toggleClass('active');
+  });
+  $(".open-login").click(function () {
+     
+    
+    $(".contact-form-box").removeClass("show");
+    $(".off-canvas-header").removeClass("show");
+    $(".open-call").removeClass('active');
+    $(".call-back-box").removeClass('show'); 
+     
+    $('.login-modal-box').toggleClass('show');
     $(this).toggleClass('active');
   });
   
@@ -147,10 +166,18 @@ $(document).ready(function () {
     event.preventDefault();
     $(".contact-form-box").removeClass("show");
   });
+  
+  
   $("#registration-form button").click(function () {
     event.preventDefault();
-    $(this).parent().addClass("go-hidden");
-    $(this).parent().next().addClass("go-show");
+    if ($(this).prev().val().length == 0) {
+      $(this).addClass('red');
+    } else {
+      $(this).parent().addClass("go-hidden");
+      $(this).parent().next().addClass("go-show");
+    };
+
+
   });
 
 
