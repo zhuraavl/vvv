@@ -26,11 +26,17 @@
     height: 250px
     will-change: transform
     transition: all .5s ease-in-out
+    @include mobil
+      height: 150px
     .pic
       height: 250px
       background: #f1f1f1
       background-size: cover
       background-position: center
+      @include mobil
+        background-size: contain
+        height: 150px
+        background-repeat: no-repeat
       
     &.big
       transform: scale(5)
@@ -46,6 +52,10 @@
       float: left
       width: 80%
       padding: 0 1em
+      @include mobil
+        float: none
+        width: 100%
+        text-align: left
       h2
         font-size: 16px
         margin: 0
@@ -60,11 +70,18 @@
       width: 20%
       text-align: right
       padding: 0 1em
+      @include mobil
+        float: none
+        width: 100%
+        text-align: left
+        padding: .5em 1em
       h3
         font-size: 20px
         font-weight: 500
         margin: 0
         color: $pink
+        @include mobil
+          font-size: 14px
         span
           display: block
           font-size: 12px
@@ -80,6 +97,7 @@
       @include tablet-v
         transform: translateY(0)
         opacity: 1
+      
     .buy-button
       font-size: 1em
       margin: auto
@@ -88,6 +106,8 @@
       background: $pink
       color: #fff
       border: 1px solid $pink
+      @include mobil
+        font-size: 12px
       
     
   &:hover

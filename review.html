@@ -50,8 +50,8 @@
           <li><a href="index.html">Главная</a></li>
           <li><a href="about.html">Оплата</a></li>
           <li><a href="about.html">Доставка</a></li>
-          <li><a href="about.html">Почему мы?</a></li>
-          <li><a href="about.html">Вопросы и ответы</a></li>
+          <li><a href="about.html#link-why-us">Почему мы?</a></li>
+          <li><a href="about.html#link-question">Вопросы и ответы</a></li>
           <li><a href="review.html">Отзывы</a></li>
           <li><a href="#" class="open-contact-form">Связаться</a></li>
           <li>
@@ -170,7 +170,7 @@
             <div class="login-box tabs-item show">
               <form action="">
                 <label for="#login" class="text-input">
-                  <input id="login" type="text" name="login" placeholder="Логин">
+                  <input id="login" type="email" name="email" placeholder="E-mail">
                 </label>
                 <label for="#pass" class="text-input">
                   <input id="pass" type="password" name="password" placeholder="Пароль">
@@ -185,13 +185,16 @@
       </div>
     </div>
     <main>
+      <section class="need-login-review"><img src="media/icons/19.png" alt="">
+        <button class="btn open-login">Войдите в личный кабинет чтобы оставить отзыв</button>
+      </section>
       <section class="review-new-review">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12 text-center">
               <h6>Оставить отзыв</h6>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-6">
               <ul class="avatar-review">
                 <li>
                   <input id="1" type="radio" name="avatar">
@@ -217,16 +220,31 @@
                   <input id="6" type="radio" name="avatar">
                   <label for="6"><img src="media/icons/15.png" alt=""></label>
                 </li>
+                <li>
+                  <input id="7" type="radio" name="avatar">
+                  <label for="7"><img src="media/icons/16.png" alt=""></label>
+                </li>
+                <li>
+                  <input id="8" type="radio" name="avatar">
+                  <label for="8"><img src="media/icons/17.png" alt=""></label>
+                </li>
+                <li>
+                  <input id="9" type="radio" name="avatar">
+                  <label for="9"><img src="media/icons/18.png" alt=""></label>
+                </li>
               </ul>
             </div>
-            <div class="col-md-4">
-              <input type="text" placeholder="Ваше имя">
-              <input type="text" placeholder="Коротко о вас">
-              <input type="email" placeholder="Ваш E-mail">
-            </div>
+            <!--.col-md-4
+            input(type="text" placeholder="Ваше имя")
+            input(type="text" placeholder="Коротко о вас")
+            input(type="email" placeholder="Ваш E-mail")
+            -->
             <div class="col-md-6">
-              <textarea placeholder="Ваш отзыв"></textarea>
-              <input type="submit" class="btn">
+              <div class="text-area-box">
+                <input type="text" placeholder="Коротко о вас">
+                <textarea placeholder="Ваш отзыв"></textarea>
+                <input type="submit" class="btn">
+              </div>
             </div>
           </div>
         </div>
@@ -284,14 +302,14 @@
           <div class="to-top">
             <button class="to-top"><img src="media/icons/top.svg" alt=""><span>вверх</span></button>
           </div>
-          <div class="clon-top-menu"><a href="">office@babyplus.ua</a><a href="">+38 (096) 033-77-00</a><a href="">+38 (099) 9-555-572</a><a href="">+38 (063) 313-11-33</a></div>
+          <div class="clon-top-menu"><a href="">sales@sorokavorona.com.ua</a><a href="">+38 (096) 033-77-00</a><a href="">+38 (050) 711-44-15</a><a href="">+38 (063) 313-11-33</a></div>
         </div>
       </div>
     </footer>
     <div class="call-back-box">
       <button class="close-modal"></button>
       <div class="call-back-content">
-        <h6>Позвонить мне</h6>
+        <h6>Перезвоните мне</h6>
         <input type="text" placeholder="Имя">
         <input type="number" placeholder="Ваш номер телефона">
         <input type="submit" vlaue="Отправить" class="btn">

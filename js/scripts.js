@@ -88,6 +88,10 @@ $(document).ready(function () {
   
   
   $("button.open-off-menu").click(function () {
+    $('.login-modal-box').removeClass('show');
+    $(".contact-form-box").removeClass('show');
+    $(".call-back-box").removeClass('show'); 
+    $('.search-box').removeClass('show');
     $("main").toggleClass("menu");
     $(".off-canvas-header").toggleClass("show");
   });
@@ -105,19 +109,26 @@ $(document).ready(function () {
   $(".to-top").click(function () {
     $("html, body").animate({scrollTop: 0}, 500);
   });
+  
+  
   // close modal on click white space
   $(".close-modal").click(function () {
     $(this).parent().removeClass('show');
   });
+  
+  
   // open call back modal
   $(".open-call").click(function () {
-    
+    $(".contact-form-box").removeClass('show');
     $('.search-box').removeClass('show');
     $(".open-search").removeClass('active');
-    
+    $(".off-canvas-header").removeClass("show");
+    $('.login-modal-box').removeClass('show');
     $(this).toggleClass('active');
     $(".call-back-box").toggleClass('show');
   });
+  
+  
   // open hidden paragraph on review
   $(".read-paragraph").click(function () {
     $(this).toggleClass('active');
@@ -132,28 +143,26 @@ $(document).ready(function () {
     });
   });
   
-  
   // open search box
-   $(".open-search").click(function () {
-     
+  $(".open-search").click(function () {
+    $(".contact-form-box").removeClass('show');
     $(".open-call").removeClass('active');
     $(".call-back-box").removeClass('show'); 
-     
+    $(".off-canvas-header").removeClass("show");
+    $('.login-modal-box').removeClass('show');
     $('.search-box').toggleClass('show');
     $(this).toggleClass('active');
   });
+  
+  
   $(".open-login").click(function () {
-     
-    
     $(".contact-form-box").removeClass("show");
     $(".off-canvas-header").removeClass("show");
     $(".open-call").removeClass('active');
     $(".call-back-box").removeClass('show'); 
-     
     $('.login-modal-box').toggleClass('show');
     $(this).toggleClass('active');
   });
-  
   
   
   $(".open-contact-form").click(function () {
@@ -162,6 +171,8 @@ $(document).ready(function () {
     $(".off-canvas-header").removeClass("show");
     $("main").removeClass("menu");
   });
+  
+  
   $(".close-contact").click(function () {
     event.preventDefault();
     $(".contact-form-box").removeClass("show");

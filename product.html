@@ -50,8 +50,8 @@
           <li><a href="index.html">Главная</a></li>
           <li><a href="about.html">Оплата</a></li>
           <li><a href="about.html">Доставка</a></li>
-          <li><a href="about.html">Почему мы?</a></li>
-          <li><a href="about.html">Вопросы и ответы</a></li>
+          <li><a href="about.html#link-why-us">Почему мы?</a></li>
+          <li><a href="about.html#link-question">Вопросы и ответы</a></li>
           <li><a href="review.html">Отзывы</a></li>
           <li><a href="#" class="open-contact-form">Связаться</a></li>
           <li>
@@ -170,7 +170,7 @@
             <div class="login-box tabs-item show">
               <form action="">
                 <label for="#login" class="text-input">
-                  <input id="login" type="text" name="login" placeholder="Логин">
+                  <input id="login" type="email" name="email" placeholder="E-mail">
                 </label>
                 <label for="#pass" class="text-input">
                   <input id="pass" type="password" name="password" placeholder="Пароль">
@@ -299,43 +299,56 @@
           </div>
           <div class="row comments-and-other-row">
             <div class="col-md-3 col-sm-6">
-              <div class="comments">
+              <div class="comments-for-login">
                 <h6>ОСТАВИТЬ КОММЕНТАРИЙ</h6>
-                <label class="maxlengthtitle"><span>60</span>/60</label>
-                <input id="email" type="text" placeholder="Ваш e-mail">
-                <input id="comment-title" type="text" placeholder="Тема" maxlength="60">
-                <label class="maxlengthbody"><span>230</span>/230</label>
                 <textarea id="comment-body" name="" placeholder="Комментарий" maxlength="240"></textarea>
-                <div class="row capcha-new">
-                  <div class="col-xs-12">
-                    <p class="text-center">Что кушает ворона?</p>
-                  </div>
-                  <div class="col-xs-3"><img src="media/logo-soroka.svg" alt=""></div>
-                  <div class="col-xs-3">
-                    <div class="capha-item">
-                      <input id="not-found" type="radio" name="capcha">
-                      <label for="not-found"> <span style="background-image: url(media/img-p/select-one.jpg)"></span></label>
-                    </div>
-                  </div>
-                  <div class="col-xs-3">
-                    <div class="capha-item">
-                      <input id="yes-this" type="radio" name="capcha">
-                      <label for="yes-this"><span style="background-image: url(media/img-p/select-two.jpg)"></span></label>
-                    </div>
-                  </div>
-                  <div class="col-xs-3">
-                    <div class="capha-item">
-                      <input id="not-found-two" type="radio" name="capcha">
-                      <label for="not-found-two"><span style="background-image: url(media/img-p/select-three.jpg)"></span></label>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-xs-12 text-center">
-                    <input type="submit" value="Публиковать" class="btn">
-                  </div>
-                </div>
+                <input type="submit" value="Публиковать" class="btn">
               </div>
+              <!-- for no login  -->
+              <!--.comments
+              h6 ОСТАВИТЬ КОММЕНТАРИЙ
+              
+              label.maxlengthtitle
+                span 60
+                | /60
+              input#email(type="text" placeholder="Ваш e-mail")
+              input#comment-title(type="text" placeholder="Тема" maxlength="60") 
+              label.maxlengthbody
+                span 230
+                | /230
+              textarea#comment-body(name="" placeholder="Комментарий" maxlength="240")
+              
+                
+                  
+              .row.capcha-new
+                .col-xs-12
+                  p.text-center Что кушает ворона?
+                .col-xs-3
+                  
+                  img(src="media/logo-soroka.svg", alt="")
+                .col-xs-3
+                  .capha-item
+                    input#not-found(type="radio" name="capcha")
+                    label(for="not-found") 
+                      span(style="background-image: url(media/img-p/select-one.jpg)")
+                .col-xs-3
+                  .capha-item
+                    input#yes-this(type="radio" name="capcha")
+                    label(for="yes-this")
+                      span(style="background-image: url(media/img-p/select-two.jpg)")
+                .col-xs-3
+                  .capha-item
+                    input#not-found-two(type="radio" name="capcha")
+                    label(for="not-found-two")
+                      span(style="background-image: url(media/img-p/select-three.jpg)")
+              .row
+                
+                .col-xs-12.text-center
+                  input.btn(type="submit" value="Публиковать")
+              
+              
+                  
+              -->
             </div>
             <div class="col-md-4 col-md-push-5 col-sm-6">
               <div class="product-page-rating">
@@ -729,14 +742,14 @@
           <div class="to-top">
             <button class="to-top"><img src="media/icons/top.svg" alt=""><span>вверх</span></button>
           </div>
-          <div class="clon-top-menu"><a href="">office@babyplus.ua</a><a href="">+38 (096) 033-77-00</a><a href="">+38 (099) 9-555-572</a><a href="">+38 (063) 313-11-33</a></div>
+          <div class="clon-top-menu"><a href="">sales@sorokavorona.com.ua</a><a href="">+38 (096) 033-77-00</a><a href="">+38 (050) 711-44-15</a><a href="">+38 (063) 313-11-33</a></div>
         </div>
       </div>
     </footer>
     <div class="call-back-box">
       <button class="close-modal"></button>
       <div class="call-back-content">
-        <h6>Позвонить мне</h6>
+        <h6>Перезвоните мне</h6>
         <input type="text" placeholder="Имя">
         <input type="number" placeholder="Ваш номер телефона">
         <input type="submit" vlaue="Отправить" class="btn">

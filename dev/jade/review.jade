@@ -16,12 +16,15 @@ html(lang='en')
   body.catalog-page.loading
     include includes/header
     main
+      section.need-login-review
+        img(src="media/icons/19.png", alt="")
+        button.btn.open-login Войдите в личный кабинет чтобы оставить отзыв
       section.review-new-review
         .container-fluid
           .row
             .col-md-12.text-center
               h6 Оставить отзыв
-            .col-md-2
+            .col-md-6
               ul.avatar-review
                 li
                   input#1(type="radio" name="avatar")
@@ -47,14 +50,28 @@ html(lang='en')
                   input#6(type="radio" name="avatar")
                   label(for="6")
                     img(src="media/icons/15.png", alt="")
+                li
+                  input#7(type="radio" name="avatar")
+                  label(for="7")
+                    img(src="media/icons/16.png", alt="")
+                li
+                  input#8(type="radio" name="avatar")
+                  label(for="8")
+                    img(src="media/icons/17.png", alt="")
+                li
+                  input#9(type="radio" name="avatar")
+                  label(for="9")
+                    img(src="media/icons/18.png", alt="")
                 
-            .col-md-4
+            //.col-md-4
               input(type="text" placeholder="Ваше имя")
               input(type="text" placeholder="Коротко о вас")
               input(type="email" placeholder="Ваш E-mail")
             .col-md-6
-              textarea(placeholder="Ваш отзыв")
-              input.btn(type="submit")
+              .text-area-box
+                input(type="text" placeholder="Коротко о вас")
+                textarea(placeholder="Ваш отзыв")
+                input.btn(type="submit")
                 
       section.review-all-review
         .container-fluid

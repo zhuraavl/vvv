@@ -90,6 +90,8 @@
             transform: scale(1)
           span
             display: none
+            @include mobil
+              display: block
           
       
   h3
@@ -123,7 +125,6 @@
     letter-spacing: 1px
     @include mobil
       font-size: 22px
-      text-align: left
       margin-bottom: .5em
   p
     margin: 0

@@ -167,7 +167,7 @@ header
         left: auto
         font-size: 12px
         height: 16px
-        color: #fff
+        color: #000
     p
       position: absolute
       right: 0
@@ -326,6 +326,11 @@ ul.main-menu
     font-size: 12px
     text-transform: uppercase
     font-weight: bold
+    @include mobil
+      font-size: 10px
+      padding: 5px
+      display: block
+      width: 100%
 
 .clon-top-menu
   padding-left: 20px
@@ -344,6 +349,10 @@ ul.main-menu
       white-space: nowrap
     &:hover
       text-decoration: none
+    &:first-child
+      @include mobil
+        letter-spacing: 0
+        font-size: 10px
     
     
 .off-canvas-header
@@ -387,6 +396,7 @@ ul.main-menu
     @include tablet-v
       padding: 10px
     
+    
   .second-menu
     float: left
     width: 50%
@@ -396,6 +406,7 @@ ul.main-menu
     min-height: 700px
     @include tablet-v
       padding: 10px
+    
   ul.category-menu-header
     list-style: none
     li
@@ -415,6 +426,8 @@ ul.main-menu
           font-size: 14px
           margin: 0
           margin-bottom: 15px
+        @include mobil
+          margin-bottom: 10px
         span.cout-cat
           display: none
       .icon
@@ -424,7 +437,7 @@ ul.main-menu
         margin-right: .5em
         img
           max-width: 100%
-        @include tablet-v
+        @include mobil
           display: none
   
   
@@ -570,6 +583,9 @@ ul.main-menu
     transition: all .4s ease-in-out
     z-index: 10
     transform: translateY(100%)
+    @include mobil
+      width: 100%
+      padding-top: 100px
     h6
       margin-bottom: 50px
     .tabs-content
