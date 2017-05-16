@@ -19,11 +19,11 @@ html(lang='en')
       section.page-title
         .container-fluid
           .row
-            .col-md-3
+            .col-md-3.col-sm-3
               a.btn.b-sec(href="") ← назад
-            .col-md-6.page-title-title
+            .col-md-6.col-sm-6.page-title-title
               h1 Канцтовары
-            .col-md-3.text-right
+            .col-md-3.col-sm-3.text-right
               a.btn.b-sec(href="") следующая →
       section.catalog
         .container-fluid
@@ -87,7 +87,7 @@ html(lang='en')
             .col-md-12
               .filter-box
                 .row
-                  .col-md-3.price-filter 
+                  .col-md-3.col-sm-4.price-filter 
                     h6 цена
                     p 
                       
@@ -99,7 +99,7 @@ html(lang='en')
                         a.ui-slider-handle.ui-state-default.ui-corner-all(href='#', style='left: 100%;')
 
 
-                  .col-md-3.age-filter
+                  .col-md-3.col-sm-4.age-filter
                     h6 возраст
                     p 
                       span#layered_price_range 27 - 61 год
@@ -108,7 +108,7 @@ html(lang='en')
                         .ui-slider-range.ui-widget-header.ui-corner-all(style='left: 21.999999999999996%; width: 78%;')
                         a.ui-slider-handle.ui-state-default.ui-corner-all(href='#', style='left: 21.999999999999996%;')
                         a.ui-slider-handle.ui-state-default.ui-corner-all(href='#', style='left: 100%;')
-                  .col-md-3.sex-filter
+                  .col-md-3.col-sm-4.sex-filter
                     h6 Пол
                     ul
                       li
@@ -126,7 +126,7 @@ html(lang='en')
                         label(for="3")
                           img(src="media/icons/8.png", alt="")
                           span для тех и тех
-                  .col-md-3.type-box-filter
+                  .col-md-3.col-sm-4.type-box-filter
                     h6 Тип упаковки
                     .select
                       select
@@ -138,9 +138,9 @@ html(lang='en')
                       span.select__arrow
             .col-md-12
               .row
-                .col-md-3
+                .col-md-3.col-sm-6
                   h6 товары — 205 товаров
-                .col-md-3.col-md-offset-6.sort-box
+                .col-md-3.col-sm-6.col-md-offset-6.sort-box
                   .select
                     select
                       option(value="last") Последние добавленные

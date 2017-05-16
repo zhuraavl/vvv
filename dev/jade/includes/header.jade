@@ -10,9 +10,9 @@ header
       .col-sm-4.col-xs-2
         a.logo(href="/")
           .row
-            .col-sm-6.col-xs-12.logo-half-one
+            .col-sm-6.col-sm-12.col-xs-12.logo-half-one
               img(src="media/logo-soroka.svg", alt="")
-            .col-sm-6.hidden-xs.logo-half-two
+            .col-sm-6.logo-half-two
               span
                 img(src="media/logo-soroka-text.svg", alt="")
               span
@@ -206,15 +206,16 @@ header
                   |шаг 
                   span 2
                   |/6
-                input(name="familia" type="text" placeholder="Фамилия")
-                button.btn Дальше ↛
+                input(name="otchestvo" type="text" placeholder="Отчество")
+                button.btn Дальше ↝
               .step.step-3
                 p
                   |шаг 
                   span 3
                   |/6
-                input(name="otchestvo" type="text" placeholder="Отчество")
-                button.btn Дальше ↝
+                input(name="familia" type="text" placeholder="Фамилия")
+                button.btn Дальше ↛
+                
               .step.step-4
                 p
                   |шаг 

@@ -86,6 +86,7 @@ $(document).ready(function () {
   
   
   
+  // canvas menu
   
   $("button.open-off-menu").click(function () {
     $('.login-modal-box').removeClass('show');
@@ -95,6 +96,14 @@ $(document).ready(function () {
     $("main").toggleClass("menu");
     $(".off-canvas-header").toggleClass("show");
   });
+   $(".off-canvas-header a").click(function () {
+     $(".off-canvas-header").removeClass("show");
+  });
+  
+  
+  
+  
+  
   $(".buy-button").click(function () {
     $('.product-in-box').addClass('show');
   });

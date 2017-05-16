@@ -30,7 +30,7 @@ header
           width: 55px
         
     .logo-half-two
-      @include mobil
+      @include tablet-v
         display: none
       span
         display: block
@@ -318,19 +318,7 @@ ul.main-menu
       font-size: 16px
     @include mobil
       font-size: 14px
-  .btn
-    padding: 5px 15px
-    margin-top: 10px
-    background: #fff
-    color: $dark-blue
-    font-size: 12px
-    text-transform: uppercase
-    font-weight: bold
-    @include mobil
-      font-size: 10px
-      padding: 5px
-      display: block
-      width: 100%
+  
 
 .clon-top-menu
   padding-left: 20px
@@ -441,6 +429,27 @@ ul.main-menu
           display: none
   
   
+// open login modal button
+.open-login
+  padding: 5px 15px
+  margin-top: 10px
+  background: #fff
+  color: $dark-blue
+  font-size: 12px
+  text-transform: uppercase
+  font-weight: bold
+  @include mobil
+    font-size: 10px
+    padding: 5px
+    display: block
+    width: 100%
+  &:hover
+    background: $dark-blue
+    color: #fff
+          
+          
+          
+          
     
   
 .catalog-menu
@@ -451,6 +460,8 @@ ul.main-menu
     float: left
     width: 25%
     vertical-align: middle
+    @include tablet-h
+      width: 33.3%
     @include mobil
       width: 50%
       text-align: center
@@ -585,7 +596,7 @@ ul.main-menu
     transform: translateY(100%)
     @include mobil
       width: 100%
-      padding-top: 100px
+      padding-top: 55px
     h6
       margin-bottom: 50px
     .tabs-content
