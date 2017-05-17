@@ -23,19 +23,80 @@
       display: inline-block
       vertical-align: text-bottom
       margin-right: 20px
+      @include tablet-v
+        width: 30px
+        height: 30px
       @include mobil
         margin: 0
       img
         width: 50px
+        @include tablet-v
+          width: 30px
     h2
       display: inline-block
       font-size: 22px
       font-weight: 300
       letter-spacing: 1px
+      @include tablet-v
+        font-size: 18px
     &:hover
       text-decoration: underline
     
     
+    
+    
+    
+    
+.slider-product-main-box    
+  margin-top: 50px
+.slider-main-product-nav
+  margin-bottom: 50px
+  position: relative
+  .slick-arrow
+    position: absolute
+    top: 0px
+    background: transparent
+    border: 0
+    z-index: 100
+    color: transparent
+    @include mobil
+      top: -15px
+    &:after
+      display: block
+      color: $pink
+      font-size: 30px
+    &.slick-next
+      left: 0
+      &:after
+        content: '←'
+    &.slick-prev
+      right: 0
+      &:after
+        content: '→'
+  .item
+    p
+      display: block
+      font-size: 22px
+      color: $pink
+      font-weight: 300
+      letter-spacing: 1px
+      text-align: center
+      transform: scale(1) translateY(10%)
+      transition: all .6s ease-in-out
+      cursor: pointer
+      @include mobil
+        font-size: 18px
+      span
+        color: #999
+        font-size: 12px
+        letter-spacing: 1px
+        margin: auto
+        display: block
+    &.slick-active
+      p
+        transform: scale(1.5) translateY(0)
+        @include mobil
+          transform: scale(1.2) translateY(0)
 .products-main
   padding-top: 50px
   @include mobil

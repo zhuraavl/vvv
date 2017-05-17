@@ -109,33 +109,32 @@ html(lang='en')
               p Краткий текст, описывающий это изменение
             
       
-      section.products-main
+      
+              
+      section.slider-product-main-box
         .container-fluid
           .row
             .col-md-12
-              ul.tabs-for-products
-                li
-                  a(href="")
+              .slider-main-product-nav
+                .item
+                  p
                     |Новинки
                     span Последние добавленные товары
-                li
-                  a(href="")
+                .item
+                  p
                     |Популярные
                     span Товары с лучшими оценками
-                li
-                  a(href="")
+                .item
+                  p
                     |С видео
                     span Товары с видео обзорами
-          .row
-            include includes/main-product-items
-          .row
-            .col-md-4
-              
-            .col-md-4
-              .contine-watch
-                a.btn(href="catalog.html") Показать больше
-            .col-md-4
-              
+              .slider-main-product
+                .item
+                  include includes/main-product-items  
+                .item
+                  include includes/main-product-items  
+                .item
+                  include includes/main-product-items  
            
       
       section.main-collection
@@ -178,7 +177,7 @@ html(lang='en')
     
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
     script(src="https://use.fontawesome.com/2b87f5494f.js")
-    script(src="js/lib/lightslider.js")
+    script(src="js/lib/slick.min.js")
     script(src="js/scripts.js")
     
     

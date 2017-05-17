@@ -11,7 +11,52 @@ $(document).ready(function () {
   //    parallax();
   //  });
 
-
+  
+  
+  // products slider on main page
+  $('.slider-main-product').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    asNavFor: '.slider-main-product-nav'
+  });
+  $('.slider-main-product-nav').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    asNavFor: '.slider-main-product',
+    dots: false,
+    arrows: false,
+    centerMode: true,
+    centerPadding: '450px',
+    focusOnSelect: true,
+    responsive: [
+    {
+      breakpoint: 1280,
+      settings: {
+        centerPadding: '350px'
+      }
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        centerPadding: '250px'
+      }
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        centerPadding: '0px',
+        arrows: true
+      }
+    }
+    
+  ]
+  });
+  
+  
+  
+  // click product
   $("a.to-product-link").click(function(e){
     event.preventDefault();
     $(this).parent().addClass( "still" );
