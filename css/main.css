@@ -678,7 +678,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 
 .login-or-register-box .tabs-content .tabs-item.show { visibility: visible; -webkit-transform: translateX(0) scale(1); transform: translateX(0) scale(1); opacity: 1; }
 
-.login-or-register-box .tabs-content .steps-box { width: 300px; height: 150px; background: #fff; margin: auto; position: relative; overflow: hidden; }
+.login-or-register-box .tabs-content .steps-box { width: 300px; height: 155px; background: #fff; margin: auto; position: relative; overflow: hidden; }
 
 @media (max-width: 783px) { .login-or-register-box .tabs-content .steps-box { width: 100%; } }
 
@@ -709,6 +709,10 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 .login-or-register-box .tabs-content .login-box { padding-top: 20px; text-align: center; }
 
 .login-or-register-box .tabs-content .login-box .text-input input { border: 0; text-align: center; height: 40px; padding: 0 20px; max-width: 400px; margin: auto; display: block; }
+
+.login-or-register-box .tabs-content .login-box .lost-pass { padding-top: 15px; display: block; }
+
+.login-or-register-box .tabs-content .login-box .lost-pass a { letter-spacing: 1px; display: block; font-size: 12px; color: #5291d8; }
 
 .login-or-register-box .tabs-content .login-box .btn { margin-top: 10px; display: inline-block; background: #ff9595; border-color: #ff9595; }
 
