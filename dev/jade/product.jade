@@ -128,17 +128,13 @@ html(lang='en')
                 input.btn(type="submit" value="Публиковать")
                 
               // for no login  
-              //.comments
+              .comments
                 h6 ОСТАВИТЬ КОММЕНТАРИЙ
                 
-                label.maxlengthtitle
-                  span 60
-                  | /60
-                input#email(type="text" placeholder="Ваш e-mail")
-                input#comment-title(type="text" placeholder="Тема" maxlength="60") 
-                label.maxlengthbody
-                  span 230
-                  | /230
+               
+                
+                input#comment-title(type="text" placeholder="Заголовок" maxlength="60") 
+                
                 textarea#comment-body(name="" placeholder="Комментарий" maxlength="240")
 
                   

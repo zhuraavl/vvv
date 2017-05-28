@@ -138,6 +138,8 @@ $(document).ready(function () {
     $(".contact-form-box").removeClass('show');
     $(".call-back-box").removeClass('show'); 
     $('.search-box').removeClass('show');
+    $(".open-search").removeClass('active');
+    $(".open-call").removeClass('active');
     $("main").toggleClass("menu");
     $(".off-canvas-header").toggleClass("show");
   });
@@ -167,6 +169,8 @@ $(document).ready(function () {
   
   // close modal on click white space
   $(".close-modal").click(function () {
+    $(".open-search").removeClass('active');
+    $(".open-call").removeClass('active');
     $(this).parent().removeClass('show');
   });
   
@@ -213,6 +217,7 @@ $(document).ready(function () {
     $(".contact-form-box").removeClass("show");
     $(".off-canvas-header").removeClass("show");
     $(".open-call").removeClass('active');
+    $(".open-search").removeClass('active');
     $(".call-back-box").removeClass('show'); 
     $('.login-modal-box').toggleClass('show');
     $(this).toggleClass('active');

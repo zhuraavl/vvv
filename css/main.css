@@ -365,7 +365,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 
 @media (max-width: 599px) { .product-page-hero { margin-top: 55px; } }
 
-.slider-product { height: 100vh; min-height: 650px; position: relative; list-style: none; padding: 0; margin: 0; overflow: hidden; background: #fff; }
+.slider-product { position: relative; list-style: none; padding: 0; margin: 0; overflow: hidden; background: #fff; }
 
 @media (max-width: 599px) { .slider-product { min-height: 100%; height: 100%; } }
 
@@ -415,7 +415,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 
 @media (max-width: 783px) { .product-page-content { margin-top: 30px; } }
 
-.product-page-title h1 { letter-spacing: 1px; margin: 0; font-weight: 300; padding-top: 5px; }
+.product-page-title h1 { letter-spacing: 1px; margin: 0; font-weight: 300; }
 
 .product-page-title h1.big-size { font-size: 34px; }
 
@@ -423,7 +423,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 
 .product-page-title .product-info-price { padding-top: 2px; }
 
-.product-page-title .product-info-price h3 { font-size: 38px; font-weight: 500; margin: 0; color: #ff9595; }
+.product-page-title .product-info-price h3 { font-size: 38px; font-weight: 500; margin: 0; color: #ff9595; line-height: 1.1; }
 
 .product-page-title .product-info-price h3 span { display: block; font-size: 12px; }
 
@@ -1237,25 +1237,21 @@ footer .text-about p { font-size: 12px; color: #fff; max-width: 180px; }
 
 .comments, .comments-for-login { position: relative; }
 
-.comments input[type=text], .comments-for-login input[type=text] { width: 100%; display: block; padding: 15px; border: 0; border-bottom: 1px dashed transparent; font-size: 18px; outline: none; text-align: center; }
+.comments input[type=text], .comments-for-login input[type=text] { width: 100%; display: block; padding: 15px; border: 0; border-bottom: 1px dashed transparent; font-size: 16px; outline: none; background: #f1f1f1; font-weight: 500; }
 
 .comments input[type=text]:focus, .comments-for-login input[type=text]:focus { border-bottom: 1px dashed #98c2f2; }
 
 .comments #comment-title, .comments-for-login #comment-title { padding-right: 35px; }
 
-.comments textarea, .comments-for-login textarea { padding: 15px; padding-top: 30px; padding-bottom: 5px; width: 100%; height: 150px; display: block; border: 0; border-bottom: 1px solid #5291d8; border-top: 0; font-size: 16px; outline: none; letter-spacing: 1px; resize: none; }
+.comments textarea, .comments-for-login textarea { padding: 15px; padding-top: 10px; padding-bottom: 5px; width: 100%; height: 150px; display: block; border: 0; border-bottom: 1px solid #5291d8; border-top: 0; font-size: 16px; outline: none; letter-spacing: 1px; resize: none; background: #f1f1f1; }
 
 .comments .btn, .comments-for-login .btn { margin-top: 15px; }
 
 .comments label, .comments-for-login label { font-size: 12px; color: rgba(0, 0, 0, 0.5); position: absolute; right: 5px; z-index: 10; }
 
-.comments .maxlengthtitle, .comments-for-login .maxlengthtitle { top: 120px; }
+.comments-for-login input[type=text] { text-align: left; }
 
-.comments .maxlengthbody, .comments-for-login .maxlengthbody { top: 165px; }
-
-.comments-for-login input[type=text] { text-align: left; font-size: 16px; background: #f1f1f1; }
-
-.comments-for-login textarea { background: #f1f1f1; border: 0; height: 240px; }
+.comments-for-login textarea { border: 0; height: 240px; padding-top: 10px; border-bottom: 1px solid #5291d8; }
 
 .mini-help-text { font-size: 12px; margin: 0; margin-top: 1.5em; color: #999; }
 
@@ -1303,46 +1299,52 @@ footer .text-about p { font-size: 12px; color: #fff; max-width: 180px; }
 
 .page-title a.btn { border: 0; padding: 0; padding-top: 25px; }
 
-.contact-form-box { position: fixed; background: #dedede; width: 100%; height: 510px; bottom: 0; left: 0; z-index: 1000; padding-top: 30px; overflow: hidden; -webkit-transition: all .5s ease-in-out; transition: all .5s ease-in-out; -webkit-transform: translateY(510px); transform: translateY(510px); opacity: 0; visibility: hidden; }
+.contact-form-box { position: fixed; background: rgba(255, 255, 255, 0.7); width: 100%; height: 100%; top: 0; left: 0; z-index: 20; opacity: 0; visibility: hidden; }
 
-.contact-form-box.show { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); visibility: visible; }
+.contact-form-box .close-modal { position: absolute; width: 100%; height: 100%; left: 0; top: 0; z-index: 10; opacity: 0; }
 
-.contact-form-box .close-contact { font-size: 16px; background: #ff9595; border: 0; z-index: 10; }
+.contact-form-box.show { opacity: 1; visibility: visible; }
 
-@media (max-width: 599px) { .contact-form-box .close-contact { position: absolute; top: -100px; right: 10px; width: 60px; display: block; }
-  .contact-form-box .close-contact span { display: none; } }
+.contact-form-box.show .contact-form-content { -webkit-transform: translateY(0); transform: translateY(0); }
 
-.contact-form-box .info-contact h6 { margin: 0; margin-top: 1px; }
+.contact-form-content { position: fixed; background: #dedede; width: 100%; height: 510px; bottom: 0; left: 0; z-index: 1000; padding-top: 30px; overflow: hidden; -webkit-transition: all .5s ease-in-out; transition: all .5s ease-in-out; -webkit-transform: translateY(510px); transform: translateY(510px); z-index: 20; }
 
-.contact-form-box .info-contact a { display: block; font-size: 14px; color: #999; letter-spacing: 1px; }
+.contact-form-content .close-contact { font-size: 16px; background: #ff9595; border: 0; z-index: 10; }
 
-.contact-form-box .steps-here .col-md-12 { padding: 0; }
+@media (max-width: 599px) { .contact-form-content .close-contact { position: absolute; top: -100px; right: 10px; width: 60px; display: block; }
+  .contact-form-content .close-contact span { display: none; } }
 
-.contact-form-box form { position: relative; }
+.contact-form-content .info-contact h6 { margin: 0; margin-top: 1px; }
 
-.contact-form-box form textarea { width: 100%; height: 400px; background: transparent; display: block; padding: 10px 0; font-size: 40px; font-weight: 300; letter-spacing: 1px; border: 2px solid transparent; }
+.contact-form-content .info-contact a { display: block; font-size: 14px; color: #999; letter-spacing: 1px; }
 
-@media (max-width: 599px) { .contact-form-box form textarea { height: 200px; padding: 10px; } }
+.contact-form-content .steps-here .col-md-12 { padding: 0; }
 
-.contact-form-box form textarea.red { border: 2px solid red; }
+.contact-form-content form { position: relative; }
 
-.contact-form-box form button, .contact-form-box form .send { font-size: 20px; max-width: 200px; display: block; }
+.contact-form-content form textarea { width: 100%; height: 300px; background: transparent; display: block; font-size: 40px; padding: 10px; font-weight: 300; letter-spacing: 1px; border: 2px solid transparent; }
 
-@media (max-width: 599px) { .contact-form-box form button, .contact-form-box form .send { margin-left: 15px; margin-top: 15px; } }
+@media (max-width: 599px) { .contact-form-content form textarea { height: 200px; padding: 10px; } }
 
-.contact-form-box form input[type=text] { width: 100%; height: 400px; background: transparent; font-size: 40px; border: 2px solid transparent; }
+.contact-form-content form textarea.red { border: 2px solid red; }
 
-@media (max-width: 599px) { .contact-form-box form input[type=text] { padding: 15px; height: 200px; } }
+.contact-form-content form button, .contact-form-content form .send { font-size: 20px; max-width: 200px; display: block; margin-left: 10px; }
 
-.contact-form-box form input[type=text].red { border: 2px solid red; }
+@media (max-width: 599px) { .contact-form-content form button, .contact-form-content form .send { margin-left: 15px; margin-top: 15px; } }
 
-.contact-form-box form .step { position: absolute; width: 100%; height: 100%; top: 0; left: 0; -webkit-transform: translateY(500px); transform: translateY(500px); -webkit-transition: all .5s ease-in-out; transition: all .5s ease-in-out; }
+.contact-form-content form input[type=text] { width: 100%; height: 300px; background: transparent; font-size: 40px; padding: 0 10px; border: 2px solid transparent; }
 
-.contact-form-box form .step.first-step { -webkit-transform: translateY(0); transform: translateY(0); }
+@media (max-width: 599px) { .contact-form-content form input[type=text] { padding: 15px; height: 200px; } }
 
-.contact-form-box form .step.go-show { -webkit-transform: translateY(0); transform: translateY(0); }
+.contact-form-content form input[type=text].red { border: 2px solid red; }
 
-.contact-form-box form .step.go-out { -webkit-transform: translateY(-500px); transform: translateY(-500px); opacity: 0; }
+.contact-form-content form .step { position: absolute; width: 100%; height: 100%; top: 0; left: 0; -webkit-transform: translateY(500px); transform: translateY(500px); -webkit-transition: all .5s ease-in-out; transition: all .5s ease-in-out; }
+
+.contact-form-content form .step.first-step { -webkit-transform: translateY(0); transform: translateY(0); }
+
+.contact-form-content form .step.go-show { -webkit-transform: translateY(0); transform: translateY(0); }
+
+.contact-form-content form .step.go-out { -webkit-transform: translateY(-500px); transform: translateY(-500px); opacity: 0; }
 
 .checkout { padding: 50px 0 100px; background: #eee; margin-top: 75px; position: relative; }
 

@@ -178,7 +178,7 @@
                 <label>
                   <input type="submit" value="Войти" class="btn">
                 </label>
-                <label class="lost-pass"><a href="">Забыл пароль</a></label>
+                <label class="lost-pass"><a href="">Забыли пароль?</a></label>
               </form>
             </div>
           </div>
@@ -277,50 +277,40 @@
                 <input type="submit" value="Публиковать" class="btn">
               </div>
               <!-- for no login  -->
-              <!--.comments
-              h6 ОСТАВИТЬ КОММЕНТАРИЙ
-              
-              label.maxlengthtitle
-                span 60
-                | /60
-              input#email(type="text" placeholder="Ваш e-mail")
-              input#comment-title(type="text" placeholder="Тема" maxlength="60") 
-              label.maxlengthbody
-                span 230
-                | /230
-              textarea#comment-body(name="" placeholder="Комментарий" maxlength="240")
-              
-                
-                  
-              .row.capcha-new
-                .col-xs-12
-                  p.text-center Что кушает ворона?
-                .col-xs-3
-                  
-                  img(src="media/logo-soroka.svg", alt="")
-                .col-xs-3
-                  .capha-item
-                    input#not-found(type="radio" name="capcha")
-                    label(for="not-found") 
-                      span(style="background-image: url(media/img-p/select-one.jpg)")
-                .col-xs-3
-                  .capha-item
-                    input#yes-this(type="radio" name="capcha")
-                    label(for="yes-this")
-                      span(style="background-image: url(media/img-p/select-two.jpg)")
-                .col-xs-3
-                  .capha-item
-                    input#not-found-two(type="radio" name="capcha")
-                    label(for="not-found-two")
-                      span(style="background-image: url(media/img-p/select-three.jpg)")
-              .row
-                
-                .col-xs-12.text-center
-                  input.btn(type="submit" value="Публиковать")
-              
-              
-                  
-              -->
+              <div class="comments">
+                <h6>ОСТАВИТЬ КОММЕНТАРИЙ</h6>
+                <input id="comment-title" type="text" placeholder="Заголовок" maxlength="60">
+                <textarea id="comment-body" name="" placeholder="Комментарий" maxlength="240"></textarea>
+                <div class="row capcha-new">
+                  <div class="col-xs-12">
+                    <p class="text-center">Что кушает ворона?</p>
+                  </div>
+                  <div class="col-xs-3"><img src="media/logo-soroka.svg" alt=""></div>
+                  <div class="col-xs-3">
+                    <div class="capha-item">
+                      <input id="not-found" type="radio" name="capcha">
+                      <label for="not-found"> <span style="background-image: url(media/img-p/select-one.jpg)"></span></label>
+                    </div>
+                  </div>
+                  <div class="col-xs-3">
+                    <div class="capha-item">
+                      <input id="yes-this" type="radio" name="capcha">
+                      <label for="yes-this"><span style="background-image: url(media/img-p/select-two.jpg)"></span></label>
+                    </div>
+                  </div>
+                  <div class="col-xs-3">
+                    <div class="capha-item">
+                      <input id="not-found-two" type="radio" name="capcha">
+                      <label for="not-found-two"><span style="background-image: url(media/img-p/select-three.jpg)"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 text-center">
+                    <input type="submit" value="Публиковать" class="btn">
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col-md-4 col-md-push-5 col-sm-6">
               <div class="product-page-rating">
@@ -691,35 +681,38 @@
       </div>
     </div>
     <div class="contact-form-box">
-      <div class="container-fluid">
-        <div class="row info-contact">
-          <div class="col-md-3">
-            <h6>Связаться с нами</h6>
+      <button class="close-modal"></button>
+      <div class="contact-form-content">
+        <div class="container-fluid">
+          <div class="row info-contact">
+            <div class="col-md-3">
+              <h6>Связаться с нами</h6>
+            </div>
+            <div class="col-md-3"><a href="">sales@sorokavorona.com.ua</a><a href="">+38 (096) 033-77-00</a></div>
+            <div class="col-md-3"><a href="">+38 (050) 711-44-15</a><a href="">+38 (063) 313-11-33</a></div>
+            <div class="col-md-3 col-xs-12 text-right">
+              <button class="btn close-contact"> <span>Закрыть</span>×</button>
+            </div>
           </div>
-          <div class="col-md-3"><a href="">sales@sorokavorona.com.ua</a><a href="">+38 (096) 033-77-00</a></div>
-          <div class="col-md-3"><a href="">+38 (050) 711-44-15</a><a href="">+38 (063) 313-11-33</a></div>
-          <div class="col-md-3 col-xs-12 text-right">
-            <button class="btn close-contact"> <span>Закрыть</span>×</button>
-          </div>
-        </div>
-        <div class="row steps-here">
-          <div class="col-md-12">
-            <form action="">
-              <div class="first-step step">
-                <textarea id="message" placeholder="Напишите ваше сообщение здесь"></textarea>
-                <button class="btn to-second-step">Дальше ↝</button>
-                <!-- if user login its button send form-->
-                <!---->
-              </div>
-              <div class="second-step step">
-                <input id="name" name="name" type="text" placeholder="Введите имя">
-                <button class="btn to-third-step">Дальше ↬</button>
-              </div>
-              <div class="third-step step">
-                <input name="email" type="text" placeholder="Номер телефона или email">
-                <input type="submit" value="Отправить ⇉" class="btn send">
-              </div>
-            </form>
+          <div class="row steps-here">
+            <div class="col-md-12">
+              <form action="">
+                <div class="first-step step">
+                  <textarea id="message" placeholder="Напишите ваше сообщение здесь"></textarea>
+                  <button class="btn to-second-step">Дальше ↝</button>
+                  <!-- if user login its button send form-->
+                  <!---->
+                </div>
+                <div class="second-step step">
+                  <input id="name" name="name" type="text" placeholder="Введите имя">
+                  <button class="btn to-third-step">Дальше ↬</button>
+                </div>
+                <div class="third-step step">
+                  <input name="email" type="text" placeholder="Номер телефона или email">
+                  <input type="submit" value="Отправить ⇉" class="btn send">
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>

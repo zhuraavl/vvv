@@ -33,34 +33,35 @@ footer
           
           
 .contact-form-box
-  
-  .container-fluid
-    .row.info-contact
-      .col-md-3
-        h6 Связаться с нами
-      
-      .col-md-3
-        a(href="") sales@sorokavorona.com.ua
-        a(href="") +38 (096) 033-77-00
-      .col-md-3
-        a(href="") +38 (050) 711-44-15
-        a(href="") +38 (063) 313-11-33
-      .col-md-3.col-xs-12.text-right
-        button.btn.close-contact 
-          span Закрыть
-          |×
-    .row.steps-here
-      .col-md-12
-        form(action="")
-          .first-step.step
-            textarea#message(placeholder="Напишите ваше сообщение здесь")
-            button.btn.to-second-step Дальше ↝
-            // if user login its button send form
-            //
-           
-          .second-step.step
-            input#name(name="name" type="text" placeholder="Введите имя")
-            button.btn.to-third-step Дальше ↬
-          .third-step.step
-            input(name="email" type="text" placeholder="Номер телефона или email")
-            input.btn.send(type="submit" value="Отправить ⇉")
+  button.close-modal
+  .contact-form-content
+    .container-fluid
+      .row.info-contact
+        .col-md-3
+          h6 Связаться с нами
+
+        .col-md-3
+          a(href="") sales@sorokavorona.com.ua
+          a(href="") +38 (096) 033-77-00
+        .col-md-3
+          a(href="") +38 (050) 711-44-15
+          a(href="") +38 (063) 313-11-33
+        .col-md-3.col-xs-12.text-right
+          button.btn.close-contact 
+            span Закрыть
+            |×
+      .row.steps-here
+        .col-md-12
+          form(action="")
+            .first-step.step
+              textarea#message(placeholder="Напишите ваше сообщение здесь")
+              button.btn.to-second-step Дальше ↝
+              // if user login its button send form
+              //
+
+            .second-step.step
+              input#name(name="name" type="text" placeholder="Введите имя")
+              button.btn.to-third-step Дальше ↬
+            .third-step.step
+              input(name="email" type="text" placeholder="Номер телефона или email")
+              input.btn.send(type="submit" value="Отправить ⇉")
