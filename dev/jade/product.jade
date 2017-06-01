@@ -130,9 +130,7 @@ html(lang='en')
               // for no login  
               .comments
                 h6 ОСТАВИТЬ КОММЕНТАРИЙ
-                
-               
-                
+                input#guest-name(type="text" placeholder="Ваше Имя")
                 input#comment-title(type="text" placeholder="Заголовок" maxlength="60") 
                 
                 textarea#comment-body(name="" placeholder="Комментарий" maxlength="240")
@@ -141,7 +139,7 @@ html(lang='en')
                     
                 .row.capcha-new
                   .col-xs-12
-                    p.text-center Что кушает ворона?
+                    p.text-center Робот? Что кушает ворона?
                   .col-xs-3
                     
                     img(src="media/logo-soroka.svg", alt="")
