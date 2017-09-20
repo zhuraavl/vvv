@@ -1477,3 +1477,5 @@ a:hover { color: #5291d8; }
 main { padding-top: 150px; -webkit-transition: all .5s ease-in-out; transition: all .5s ease-in-out; }
 
 @media (max-width: 599px) { main { padding-top: 100px; } }
+
+main.menu { -webkit-transform: scale(0.8); transform: scale(0.8); }

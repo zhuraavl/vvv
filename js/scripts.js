@@ -1,6 +1,8 @@
 $(document).ready(function () {
 
 
+  
+  
   //  //   example parallax
   //  function parallax() {
   //    var scrolled = $(window).scrollTop();
@@ -11,6 +13,9 @@ $(document).ready(function () {
   //    parallax();
   //  });
 
+  
+  
+  
   
   
   // products slider on main page

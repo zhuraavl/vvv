@@ -2082,6 +2082,26 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/media\/images\/cover-big.jpg": {
+		"ft": 16384,
+		"iS": 34249,
+		"oA": 0,
+		"oAP": "\/media\/images\/cover-big.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/media\/images\/cover-small.jpg": {
+		"ft": 16384,
+		"iS": 3507,
+		"oA": 0,
+		"oAP": "\/media\/images\/cover-small.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/media\/img-p\/1.jpg": {
 		"ft": 16384,
 		"iS": 378865,
